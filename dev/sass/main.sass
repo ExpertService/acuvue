@@ -1,0 +1,35 @@
+@import 'common/fonts.sass'
+@import 'common/vars.sass'
+@import 'common/mixins.sass'
+@import 'common/libs.sass'
+
+html
+  font-size: $baseFontSize
+
+body
+  font-family: $mainFont
+  color: $mainColor
+
+ul,li,p
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.wrapper
+  height: 100vh
+  width: 100%
+
+.content
+
+//Изменение стилей библиотек
+@import "libs_modify/libs_modify.sass"
+//компоненты
+@import "components/components.sass"
+//блоки
+@import "blocks/blocks.sass"
+//формы
+@import "forms/forms.sass"
+
+// СТРАНИЦЫ
+// Главная страница
+@import 'pages/index.sass'
