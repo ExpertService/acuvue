@@ -1,35 +1,79 @@
-nav
+.custom-navbar__menu
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  color: $menuColor
   letter-spacing: -0.4px
 
-.navbar-toggler-text
-  font-size: $baseFontSize
+@media screen and (max-width: $toggleMenuMobile)
+  .custom-navbar__menu
+    order: 1
 
-.nav-item
-  margin-right: 0.5vw
-  margin-left: 0.5vw
-  &:first-child
-    margin-left: 1vw
-.nav-link
-  text-wrap: none
+.custom-navbar__menu ul
+  display: flex
+  justify-content: flex-start
 
-.hot-line
-  color: $mainColor
-  &
-    a
-      padding-top: 0
-      padding-bottom: 0
-      padding-left: 0.5vw
-      padding-right: 0.5vw
-      color: $mainColor
-      &:hover
-        color: $mainColor
-    p
-      margin-top: 0
-      margin-bottom: 0
+.custom-navbar__menu li
+  margin-left: 1rem
+  margin-right: 1rem
 
-.phone-number
-  font-family: "CirceBold"
-  font-size: 1.063rem
+.custom-navbar__menu li:first-child
+  margin-left: 2rem
 
-.time-for-calling
-  font-size: 0.75rem
+.custom-navbar__toggle-nav,
+.menu-exit-item
+  display: none
+
+@media screen and (max-width:  $toggleMenuWidth)
+  .custom-navbar__menu
+    position: relative
+  .custom-navbar__menu
+    ul.custom-navbar__active
+        display: none
+  .custom-navbar__menu ul
+    flex-direction: column
+    position: absolute
+    top: 120%
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15)
+    border-radius: 3px
+    background: white
+
+  .custom-navbar__menu li
+    margin-top: 0.5rem
+    margin-right: 0.625rem
+    margin-bottom: 0.5rem
+    margin-left: 0.625rem
+    &:first-child
+      margin-left: 10px
+
+  .custom-navbar__toggle-nav
+    display: inline-flex
+    &
+      span
+        margin-left: 1rem
+        line-height: 1.5rem
+
+  .toggle-icon
+    display: inline-block
+    width: 1.5rem
+    height: 1.5rem
+    stroke: none
+    fill: $mainColor
+
+@media screen and (max-width:  $toggleMenuMobile)
+  .custom-navbar__menu ul
+    left: 0
+    width: 100vw
+    align-items: center
+
+  .menu-exit-item
+    display: block
+    &
+      a
+        display: inline-flex
+        align-items: center
+
+  .custom-navbar__toggle-nav
+    margin-left: 1rem
+    span
+      display: none

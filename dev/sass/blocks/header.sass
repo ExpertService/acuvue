@@ -1,28 +1,91 @@
 header
+  display: flex
+  align-content: center
   height: 5rem
   width: 100%
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.03)
+@media screen and (max-width:  720px)
+  header
+    justify-content: space-between
 
-.header-logo-block
+.main-header__logo-container
   display: inline-flex
   justify-content: center
   align-items: center
   margin-left: 3.75rem
+  margin-right: 1rem
   width: 7.375rem
   height: 5rem
   background-color: $mainColor
 
-.header-logo-acuvue,
-.header-logo-optica
+@media screen and (max-width:  720px)
+  .main-header__logo-container
+    order: 2
+    margin-left: 0
+    margin-right: 0
+
+.main-header__first-logo,
+.main-header__second-logo
   margin-left: 0.5rem
   margin-right: 0.5rem
-  width: 2.25rem
-  height: 2.25rem
+  padding: 0.25rem
+  width: 1.75rem
+  height: 1.75rem
   border-radius: 1.125rem
   background-color: white
   box-shadow: 0 3px 6px 0 rgba(118, 219, 245, 0.43)
+  fill: $logoColor
 
-.header-logo-separator
+.main-header__logo-separator
   width: 2px
   height: 40px
   background-color: rgba(255, 255, 255, 0.7)
+
+.main-header__phone-icon-container,
+.main-header__first-phone-number,
+.main-header__second-phone-number,
+.main-header__exit-icon-container
+  margin-left: 1rem
+  margin-right: 1rem
+  display: flex
+  align-items: center
+  //&
+  //  a
+  //    margin: auto
+
+.main-header__phone-icon-container
+  margin-left: auto
+
+.ic_settings_sms,
+.ic_settings_pass
+  width: 1.5rem
+  height: 1.5rem
+  fill: $mainColor
+
+.main-header__second-phone-number
+  align-self: flex-end
+  margin-bottom: 0.60rem
+
+.main-header__phone-number
+  margin-top: 0.188rem
+  margin-bottom: 0.188rem
+  font-family: "CirceBold"
+  font-size: 1.063rem
+
+.main-header__time-for-calling
+  margin-top: 0.188rem
+  margin-bottom: 0.188rem
+  font-family: "CirceRegular"
+  font-size: 0.75rem
+  color: $lightBlue
+
+
+
+@media screen and (max-width:  720px)
+  .main-header__first-phone-number,
+  .main-header__second-phone-number,
+  .main-header__exit-icon-container
+    display: none
+  .main-header__phone-icon-container
+    order: 3
+    margin-left: 0

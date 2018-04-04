@@ -1,7 +1,6 @@
 module.exports = function() {
     $.gulp.task('libsJS:dev', function() {
-        return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js',
-                            'node_modules/bootstrap/dist/js/bootstrap.bundle.js'])
+        return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js'])
             .pipe($.gp.concat('libs.min.js'))
             .pipe($.gulp.dest('./build/js/'))
             .pipe($.browserSync.reload({
@@ -10,8 +9,7 @@ module.exports = function() {
     });
 
     $.gulp.task('libsJS:build', function() {
-        return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js',
-                            'node_modules/bootstrap/dist/js/bootstrap.bundle.js'])
+        return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js'])
             .pipe($.gp.concat('libs.min.js'))
             .pipe($.gp.uglifyjs())
             .pipe($.gulp.dest('./build/js/'));

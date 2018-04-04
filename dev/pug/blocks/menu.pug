@@ -1,22 +1,29 @@
-nav.navbar.navbar-expand-xl.navbar-light.d-inline-flex.justify-content-start(role="navigation")
-    a(class="navbar-brand" href="#")
-        .header-logo-block
-            .header-logo-acuvue
-            .header-logo-separator
-            .header-logo-optica
-    button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
-        .nav-bar-icon-container.d-inline-flex.align-items-center
-            span.navbar-toggler-icon
-            span.navbar-toggler-text Меню
-    .collapse.navbar-collapse
-        ul.navbar-nav
-            li.nav-item
-                a.nav-link(href="javascript:void(0);") Главная
-            li.nav-item
-                a.nav-link(href="javascript:void(0);") Линзы&nbspучаствующие&nbspв&nbspакции
-            li.nav-item
-                a.nav-link(href="javascript:void(0);") Вопрос&nbsp-&nbspответ
-            li.nav-item
-                a.nav-link(href="javascript:void(0);") Правила
-            li.nav-item
-                a.nav-link(href="javascript:void(0);") Обратная&nbspсвязь
+nav.custom-navbar__menu
+    ul.custom-navbar__active
+        li
+            a(href="javascript:void(0);") Главная
+        li
+            a(href="javascript:void(0);") Линзы&nbspучаствующие&nbspв&nbspакции
+        li
+            a(href="javascript:void(0);") Вопрос&nbsp-&nbspответ
+        li
+            a(href="javascript:void(0);") Правила
+        li
+            a(href="javascript:void(0);") Обратная&nbspсвязь
+        li.menu-exit-item
+            a(href="javascript:void(0);")
+                +icon('ic_settings_pass', 'ic_settings_pass')
+                span Выход
+    a.custom-navbar__toggle-nav(href="javascript:void(0);")
+        +icon('group-26', 'toggle-icon')
+        span Меню
+    //form.search-form
+    //    input(type="text")
+    //    button Search
+
+//nav.navbar.navbar-expand-xl.navbar-light.d-flex.justify-content-start(role="navigation")
+//
+//        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation")
+//            .nav-bar-icon-container.d-inline-flex.align-items-center
+//                span.navbar-toggler-icon
+//                span.navbar-toggler-text Меню

@@ -1,24 +1,25 @@
 header
-    .container-fluid
-        .row.no-gutters
-            .col-6.col-lg-7
-                include menu
-            .col-6.col-lg-5
-                .hot-line.h-100.d-flex.justify-content-end.align-items-center
-                    .header-phone-icon.d-inline-flex
-                        a.nav-link(href="javascript:void(0);")
-                            img(src="img/content/ic-settings-sms.png" alt="СМС"
-                            srcset="img/content/ic-settings-sms.png 1x,img/content/ic-settings-sms@2x.png 2x,img/content/ic-settings-sms@3x.png 3x")
-                    .header-first-number.d-inline-flex.flex-column.align-self-end.pb-1
-                        a.nav-link(href="javascript:void(0);")
-                            p Горячая линия
-                            p.phone-number +7&nbsp968&nbsp432-63-60
-                            p.time-for-calling пн-сб: с 03:00 до 8:00
-                    .header-second-number.d-inline-flex.flex-column.align-self-end.pb-1
-                        a.nav-link(href="javascript:void(0);")
-                            p.phone-number +7&nbsp965&nbsp111-05-30
-                            p.time-for-calling пн-сб: с 08:00 до 17:00
-                    .header-exit-icon
-                        a.nav-link(href="javascript:void(0);")
-                            img(src="img/content/ic-settings-pass.png" alt="СМС"
-                            srcset="img/content/ic-settings-pass.png 1x,img/content/ic-settings-pass@2x.png 2x,img/content/ic-settings-pass@3x.png 3x")
+    .main-header__logo-container
+        a.main-header__first-logo-link(href="javascript:void(0);")
+            +icon('location-24px-glyph_pin', 'main-header__first-logo')
+        .main-header__logo-separator
+        a.main-header__second-logo-link(href="javascript:void(0);")
+            +icon('location-24px-glyph_pin', 'main-header__second-logo')
+
+    include menu
+
+    .main-header__phone-icon-container
+        a(href="javascript:void(0);")
+            +icon('ic_settings_sms', 'ic_settings_sms')
+    .main-header__first-phone-number
+        a(href="javascript:void(0);")
+            p Горячая линия
+            p.main-header__phone-number +7&nbsp968&nbsp432-63-60
+            p.main-header__time-for-calling пн-сб: с 03:00 до 8:00
+    .main-header__second-phone-number
+        a(href="javascript:void(0);")
+            p.main-header__phone-number +7&nbsp965&nbsp111-05-30
+            p.main-header__time-for-calling пн-сб: с 08:00 до 17:00
+    .main-header__exit-icon-container
+        a(href="javascript:void(0);")
+            +icon('ic_settings_pass', 'ic_settings_pass')
