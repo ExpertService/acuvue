@@ -1,0 +1,63 @@
+$tableColorGrayish: #b7b7b7
+$icPresentColor: #00aae8
+$bottomBorderColorth: #eeeeee
+$positivePointsValueColor: green
+$negativePointsValueColor: red
+
+table
+  border-spacing: 0px 0px
+  width: 100%
+  font-size: 0.875rem
+  letter-spacing: -0.1px
+  color: #b7b7b7
+  background: linear-gradient(to right, $tableColorGrayish 0%, rgba(255,255,255,0) 100%)
+
+th
+  padding-bottom: 0.438rem
+  border-bottom: solid 2px $bottomBorderColorth
+
+table tr
+  height: 3.75rem
+  vertical-align: middle
+  text-align: center
+  background: white
+
+.purchase-history-table__spacer
+  height: 2px
+  background: rgba(255,255,255,0)
+
+table tr td:nth-child(n+5)
+  width: 3.125rem
+
+table tr:first-child th:nth-child(2)
+  text-align: left
+
+table tr td:nth-child(2),
+table tr td:nth-child(3)
+  text-align: left
+
+.purchase-history-table__header
+  height: 2.5rem
+  color: $tableColorGrayish
+  font-size: 0.625rem
+  vertical-align: bottom
+
+.ic_income,
+.ic_present
+  width: 1.75rem
+  height: 1.75rem
+  fill: $tableColorGrayish
+
+.ic_present
+  fill: $icPresentColor
+
+.purchase-history-table__date-value,
+.purchase-history-table__name-value
+  color: black
+
+.purchase-history-table__points-value__positive
+  font-family: "CirceBold"
+  color: $positivePointsValueColor
+.purchase-history-table__points-value__negative
+  font-family: "CirceBold"
+  color: $negativePointsValueColor

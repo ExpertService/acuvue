@@ -5,5 +5,12 @@ block variables
 	- var pageClass = 'index-page'
 
 block content
-	.left-content-block
-	.right-content-block
+	section.left-content-block
+		.buttons-bar
+	section.right-content-block
+		section.purchase-history
+			.purchase-history__caption-bar
+				h2.purchase-history__header История моих покупок
+				a(href="#" class="purchase-history__button button-first-type") Как заработать баллы
+			.purchase-history__table-container
+				include ../blocks/table
