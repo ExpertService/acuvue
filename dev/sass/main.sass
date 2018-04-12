@@ -6,13 +6,14 @@
 html
   font-size: $baseFontSize
   height: 100%
+  line-height: 1
 
 body
   font-family: $mainFont
   color: $mainColor
   height: 100%
 
-ul,li,p,h1,h2,h3,h4
+ul,li,p,h1,h2,h3,h4,span
   list-style-type: none
   margin: 0
   padding: 0
@@ -30,12 +31,16 @@ a
   flex-wrap: nowrap
   align-items: stretch
   width: 100%
-  overflow: hidden
   height: calc(100vh - 6rem - 5rem)
-  min-height: 38rem
-@media screen and (max-width:  620px)
+  padding-top: 5rem
+  overflow: auto
+  //min-height: 38rem
+
+@media screen and (max-width:  $tabletWidth)
   .content
-    padding-top: 5rem
+    flex-wrap: wrap
+@media screen and (max-width:  $toggleMenuMobile)
+    margin-top: 5rem
 
 //Изменение стилей библиотек
 @import "libs_modify/libs_modify.sass"

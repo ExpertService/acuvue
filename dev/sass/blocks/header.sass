@@ -1,14 +1,17 @@
 header
+  position: fixed
+  z-index: 2
   display: flex
   align-content: center
   height: $headerHeight
   width: 100%
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.03)
   background-color: white
-@media screen and (max-width:  620px)
+
+@media screen and (max-width:  $toggleMenuMobile)
   header
-    position: fixed
     justify-content: space-between
+
 
 .main-header__logo-container
   display: inline-flex

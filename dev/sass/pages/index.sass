@@ -1,26 +1,226 @@
 .left-content-block
+  box-sizing: border-box
+  padding-top: 2.25rem
+  padding-left: 3.75rem
   width: 50%
-  min-width: 50rem
+  max-width: 46rem
+  min-height: 35rem
   color: white
-  background: radial-gradient(100% 100% at 185% 50%, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 99.9%,rgba(0,163,224,1) 100%)
+  background: radial-gradient(100% 120% at 190% 50%, rgba(0,163,224,0.1) 0%, rgba(0,0,0,00) 99.9%,rgba(0,163,224,1) 100%)
+@media screen and (max-width:  $toggleMenuWidth)
+  .left-content-block
+    min-height: 52rem
 @media screen and (max-width:  $tabletWidth)
-  min-width: 0rem
-  width: 100%
+  .left-content-block
+    width: 100%
+    max-width: 100%
+    min-height: 35rem
+    background: $mainColor
+@media screen and (max-width:  $toggleMenuMobile)
+  .left-content-block
+    padding-left: 1rem
 
 .right-content-block
-  display: flex
-  justify-content: flex-start
-  align-items: center 
-  width: 50%
-  background-color: white
+  box-sizing: border-box
+  width: 70%
+  min-height: 35rem
+@media screen and (max-width:  $toggleMenuWidth)
+  .right-content-block
+    min-height: 52rem
 @media screen and (max-width:  $tabletWidth)
-  display: none
+  .right-content-block
+    padding-left: 3.75rem
+    width: 100%
+    min-height: 35rem
+@media screen and (max-width:  $toggleMenuMobile)
+  .right-content-block
+    padding-left: 1rem
 
+
+//левая панель
 .buttons-bar
   display: flex
+  flex-wrap: nowrap
+  justify-items: flex-start
+  margin-bottom: 3.75rem
+@media screen and (max-width:  $tabletWidth)
+  .buttons-bar
+    margin-bottom: 1rem
 
-.purchase-history
+.QR-code__button,
+.order-QR-card__button,
+.plus-points__button
+  float: left
+  margin-right: 0.75rem
+  margin-bottom: 1rem
+  flex-basis: auto
+  flex-shrink: 1
+  flex-grow: 0
+
+.settings__button
+  float: right
+  margin-left: auto
+  margin-right: 3.75rem
+  margin-bottom: 1.3rem
+  flex-basis: auto
+  flex-shrink: 1
+  flex-grow: 0
+
+.user-data-container
+  margin-bottom: 2rem
+.user-data-fio
+  margin-bottom: 0.625rem
+  font-family: CirceBold
+  font-size: 1.75rem
+.user-data-phone,
+.user-data-email
+  color: $userDataTextColor
+  font-size: 0.875rem
+  letter-spacing: -0.1px
+
+.round-indicators-container
+  position: relative
+  margin-bottom: 4rem
   width: 100%
+
+.points-indicator
+  display: inline-block
+  width: 14.375rem
+.days-indicator
+  float: right
+  display: inline-block
+  margin-right: 6rem
+  width: 14.375rem
+
+@media screen and (max-width:  $toggleMenuWidth)
+  .points-indicator
+    display: block
+    margin-bottom: 1rem
+  .days-indicator
+    float: none
+    display: block
+    margin-right: 0
+@media screen and (max-width:  $tabletWidth)
+  .points-indicator
+    display: inline-block
+    width: 14.375rem
+  .days-indicator
+    float: right
+    display: inline-block
+    margin-right: 6rem
+    width: 14.375rem
+@media screen and (max-width:  $toggleMenuMobile)
+  .points-indicator
+    display: block
+    margin-bottom: 1rem
+  .days-indicator
+    float: none
+    display: block
+    margin-right: 0
+    width: 100%
+
+.round-indicator__icon-container
+  display: inline-block
+  margin-right: 0.75rem
+  width: 5.313rem
+  height: 5.313rem
+  background-image: url(../img/common/ic-operation_history.svg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  vertical-align: middle
+
+.lenses-parameters__container
+  position: relative
+  margin-bottom: 6rem
+  width: 100%
+
+.lenses-parameters__icon-container
+  display: inline-block
+  margin-right: 0.75rem
+  width: 5.313rem
+  height: 4.625rem
+  background-image: url(../img/common/ic_eye-b-open.svg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  text-align: center
+  vertical-align: bottom
+
+.lenses-parameters__caption
+  position: absolute
+  top: 0.5rem
+  left: 6.063rem
+  font-family: CirceRegular
+  font-size: 0.75rem
+
+.lenses-parameters__left-eye
+  display: inline-block
+  width: 12.5rem
+  &
+    span:nth-child(1)
+      display: block
+      margin-bottom: 0.2rem
+      font-size: 1rem
+    span:nth-child(n+2)
+      font-family: CirceBold
+      font-size: 1.125rem
+
+.lenses-parameters__right-eye
+  float: right
+  display: inline-block
+  margin-top: 2.2rem
+  margin-right: 6rem
+  width: 12.5rem
+  &
+    span:nth-child(1)
+      display: block
+      margin-bottom: 0.2rem
+      font-size: 1rem
+    span:nth-child(n+2)
+      font-family: CirceBold
+      font-size: 1.125rem
+
+.lenses-parameters__change-parameters-button
+  position: absolute
+  bottom: -3.875rem
+  left: 6.063rem
+
+@media screen and (max-width:  $toggleMenuWidth)
+  .lenses-parameters__left-eye
+    display: block
+  .lenses-parameters__right-eye
+    display: block
+    float: none
+    margin-right: 0
+  .lenses-parameters__change-parameters-button
+    left: 0
+@media screen and (max-width:  $tabletWidth)
+  .lenses-parameters__left-eye
+    display: inline-block
+  .lenses-parameters__right-eye
+    display: inline-block
+    float: right
+    margin-right: 6rem
+  .lenses-parameters__change-parameters-button
+    left: 6.063rem
+@media screen and (max-width:  $toggleMenuMobile)
+  .lenses-parameters__left-eye
+    display: block
+  .lenses-parameters__right-eye
+    display: block
+    float: none
+    margin-right: 0
+  .lenses-parameters__change-parameters-button
+    left: 0
+
+//правая панель
+.purchase-history
+  margin-top: 9.5rem
+  width: 100%
+@media screen and (max-width:  $tabletWidth)
+  .purchase-history
+    margin-top: 1rem
 
 .purchase-history__caption-bar
   display: flex
@@ -30,8 +230,13 @@
   width: 100%
 
 .purchase-history__header
-  font-family: "CirceBold"
+  font-family: CirceBold
   font-size: 1.75rem
+
+.purchase-history__button
+  float: right
+  margin-right: 3.75rem
+  white-space: nowrap
 
 .purchase-history__table-container
   height: 20.5rem
