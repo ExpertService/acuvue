@@ -8,4 +8,15 @@ $(document).ready(function () {
         });
     })();
 
+    (function () {
+        $('.lenses-parameters__change-parameters-button').click(function(){
+            $('.modal-container').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
+        });
+        $('.modal-container').click(function(){
+            $(this).addClass('disappearing');
+            $('body').removeClass('modal-active');
+        });
+    })();
+
 });
