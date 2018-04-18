@@ -1,5 +1,14 @@
 $(document).ready(function () {
     svg4everybody({});
+
+    $('.modal-addpoints__article-container').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
+
     (function() {
         jQuery('.custom-navbar__toggle-nav').click(function (e) {
             jQuery(this).toggleClass('custom-navbar__active');

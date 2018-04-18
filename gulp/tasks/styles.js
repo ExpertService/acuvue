@@ -34,7 +34,9 @@ module.exports = function () {
             }));
     });
     $.gulp.task('libsstyles:copy', function() {
-        return $.gulp.src(['node_modules/normalize.css/normalize.css'
+        return $.gulp.src(['node_modules/normalize.css/normalize.css',
+                            'node_modules/slick-carousel/slick/slick.css',
+                            'node_modules/slick-carousel/slick/slick-theme.css'
                             ])
             .pipe($.gp.concat('libs.min.css'))
             .pipe($.gulp.dest('./build/css/'));
