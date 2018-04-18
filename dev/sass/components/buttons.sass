@@ -1,5 +1,7 @@
 .button-change-parameters-type,
-.button-settings-type
+.button-settings-type,
+.button-change-parameters-type--disabled,
+.button-settings-type--disabled
   padding-left: 1rem
   padding-right: 1rem
   border: solid 1px $mainColor
@@ -16,8 +18,8 @@
   color: #393f4e
   background-color: #fdfcfa
 
-.button-change-parameters-type__disabled,
-.button-settings-type__disabled
+.button-change-parameters-type--disabled,
+.button-settings-type--disabled
   opacity: 0.5
 
 .button-change-parameters-type:active
@@ -29,9 +31,10 @@
   box-shadow: none
 
 
-.button-save-type
-  width: 174px
-  height: 58px
+.button-save-type,
+.button-save-type--disabled
+  width: 10.875rem
+  height: 3.625rem
   border-radius: 8px
   color: white
   font-family: CirceBold
@@ -39,3 +42,7 @@
   text-transform: capitalize
   background-color: #003087
   box-shadow: 0 2px 4px 0 rgba(20, 20, 20, 0.12)
+.button-save-type:active
+  box-shadow: none
+.button-save-type--disabled
+  opacity: 0.5

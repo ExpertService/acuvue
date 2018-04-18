@@ -19,7 +19,8 @@ $(document).ready(function () {
         });
     })();
 
-    customInputNumberSpin($('.modal-pay-details__optical-strength-input'));
+    customInputNumberSpin($('.modal-pay-details__optical-strength-astigmatism-input'));
+    customInputNumberSpin($('.modal-pay-details__optical-strength-presbyopia-input'));
     customInputNumberSpin($('.modal-pay-details__basic-curvature-input'));
     customInputNumberSpin($('.modal-pay-details__axis-input'));
 
@@ -30,6 +31,7 @@ $(document).ready(function () {
                 name    = $(this).attr("name");
             var template =  '<div class="' + classes + '">';
             template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+            template += '<span class="custom-options-caption">' + $(this).attr("placeholder") + '</span>';
             template += '<div class="custom-options">';
             $(this).find("option").each(function() {
                 template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
@@ -45,12 +47,12 @@ $(document).ready(function () {
         }, function() {
             $(this).parents(".custom-options").removeClass("option-hover");
         });
-        $(".custom-select-trigger").on("click", function() {
+        $(".custom-select-trigger").on("click", function(e) {
             $('html').one('click',function() {
                 $(".custom-select").removeClass("opened");
             });
             $(this).parents(".custom-select").toggleClass("opened");
-            event.stopPropagation();
+            e.stopPropagation();
         });
         $(".custom-option").on("click", function() {
             $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
