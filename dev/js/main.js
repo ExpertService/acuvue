@@ -10,11 +10,16 @@ $(document).ready(function () {
 
     (function () {
         $('.lenses-parameters__change-parameters-button').click(function(){
-            $('.modal-container').removeClass('disappearing').addClass('appearing');
+            $('.modal-container-lenses-parameters').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
+        });
+        $('.purchase-history__addpoints-button').click(function(){
+            $('.modal-container-addpoints').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
         $('.modal-close-button').click(function(){
-            $('.modal-container').addClass('disappearing');
+            $('.modal-container-lenses-parameters').addClass('disappearing');
+            $('.modal-container-addpoints').addClass('disappearing');
             $('body').removeClass('modal-active');
         });
     })();
