@@ -1,6 +1,9 @@
+$labelColor: #b7b7b7
+
+
 .modal-container
   position: fixed
-  display: table
+  display: flex
   height: calc(100vh - 6rem - 5rem)
   width: 100%
   top: 5rem
@@ -23,27 +26,31 @@
 
 
 .modal-background
-  display: table-cell
+  flex-basis: auto
+  flex-grow: 1
+  flex-shrink: 1
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
   background: rgba(0,0,0,.8)
   text-align: center
   vertical-align: middle
+  overflow: auto
   .modal
-    width: 200px
-    height: 100px
+    width: 31.5rem
+    height: 30rem
     background: white
-    padding: 50px
+    padding: 1.5rem
     display: inline-block
     border-radius: 3px
     font-weight: 300
     position: relative
     background-color: white
-    h2
-      font-size: 25px
-      line-height: 25px
-      margin-bottom: 15px
-    p
-      font-size: 18px
-      line-height: 22px
+@media screen and (max-width:  $toggleMenuMobile)
+  .modal
+    width: 100%
 
 @keyframes unfoldIn
   0%
@@ -72,3 +79,66 @@
     transform: scale(1)
   100%
     transform: scale(0)
+
+.modal-close-button
+  position: absolute
+  top: 0
+  right: 0
+  height: 1.563rem
+  width: 1.563rem
+  stroke: black
+  fill: white
+
+.modal-pay-details__caption
+  margin-bottom: 1rem
+  color: black
+  text-align: left
+
+.modal-pay-details__optical-strength-spin-container,
+.modal-pay-details__axis-container
+  display: inline-block
+  float: left
+  line-height: 2rem
+
+.modal-pay-details__input-label,
+.modal-pay-details__select-label
+  margin-bottom: 1.375rem
+  color: $labelColor
+  font-family: CirceRegular
+  font-size: 0.875rem
+  letter-spacing: -0.1px
+
+.modal-pay-details__basic-curvature-spin-container,
+.modal-pay-details__optical-strength-spin-container--right
+  display: inline-block
+  float: right
+  line-height: 2rem
+@media screen and (max-width:  $toggleMenuMobile)
+  .modal-pay-details__basic-curvature-spin-container,
+  .modal-pay-details__optical-strength-spin-container--right
+    float: left
+
+.modal-pay-details__lenses-for-correction-astigmatism,
+.modal-pay-details__lenses-for-correction-presbyopia
+  float: left
+  display: flex
+  align-items: center
+  margin-top: 1.875rem
+  margin-bottom: 1.25rem
+  width: 100%
+  &
+    label
+      height: 1.5rem
+      font-family: CirceRegular
+      font-size: 0.875rem
+      letter-spacing: -0.1px
+      line-height: 1.5rem
+      color: black
+
+.modal-pay-details__further-button
+  display: block
+  float: left
+  margin-top: 1rem
+  width: 7.813rem
+  height: 3.625rem
+  line-height: 3.625rem

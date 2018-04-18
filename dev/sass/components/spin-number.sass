@@ -1,0 +1,46 @@
+.input-number-container
+  width: 15rem
+  height: 3.625rem
+  border-radius: 8px
+  box-shadow: 0 2px 4px 0 rgba(20, 20, 20, 0.12)
+  font-size: 0
+
+.input-number,
+.input-number-decrement,
+.input-number-increment
+  box-sizing: border-box
+  border: 1px solid #dcdcdc
+  height: 100%
+  color: black
+  font-family: CirceBold
+  font-size: 1.125rem
+  user-select: none
+
+.input-number
+  padding: 0 12px
+  width: calc(100% - 6rem)
+  border-left: solid 1px $mainColor
+  border-right: solid 1px $mainColor
+  vertical-align: top
+  text-align: center
+  outline: none
+
+.input-number-decrement,
+.input-number-increment
+  display: inline-block
+  width: 3rem
+  line-height: 3.625rem
+  color: $mainColor
+  text-align: center
+  cursor: pointer
+
+  &:active
+    background: #def6ff
+
+.input-number-decrement
+  border-right: none
+  border-radius: 8px 0 0 8px
+
+.input-number-increment
+  border-left: none
+  border-radius: 0 8px 8px 0

@@ -12,6 +12,7 @@
     "bootstrap": "^4.0.0",
     "bootstrap-datepicker": "^1.7.1",
     "bootstrap-select": "^1.12.4",
+    "bootstrap-touchspin": "^4.2.0",
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
     "dev-ip": "^1.0.1",

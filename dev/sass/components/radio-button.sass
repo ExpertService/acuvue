@@ -1,0 +1,19 @@
+$radioButtonColor: #003087
+
+input[type="radio"] 
+  appearance: none
+  margin-right: 1.5rem
+  width: 1.5rem
+  height: 1.5rem
+  box-shadow: inset 0 0 0 .08rem white, 0 0 0 .05rem
+  border-radius: 50%
+  color: $radioButtonColor
+  transition: .2s
+  cursor: pointer
+
+  &:checked
+    background: $radioButtonColor
+    box-shadow: inset 0 0 0 .35em white, 0 0 0 .05em $radioButtonColor
+  &:focus
+    outline: 0
+
