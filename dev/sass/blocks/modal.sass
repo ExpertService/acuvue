@@ -40,7 +40,7 @@ $labelColor: #b7b7b7
   overflow: auto
   .modal
     width: 31.5rem
-    height: 30rem
+    //height: 30rem
     background: white
     padding: 1.5rem
     display: inline-block
@@ -82,12 +82,18 @@ $labelColor: #b7b7b7
 
 .modal-close-button
   position: absolute
-  top: 0
-  right: 0
+  top: 1.5rem
+  right: 1.5rem
   height: 1.563rem
   width: 1.563rem
-  stroke: black
-  fill: white
+  background-image: url(../img/common/ic_close.svg)
+  -webkit-background-size:
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  cursor: pointer
+  //stroke: black
+  //fill: white
 
 .modal-pay-details__caption
   margin-bottom: 1rem
@@ -107,6 +113,10 @@ $labelColor: #b7b7b7
   font-family: CirceRegular
   font-size: 0.875rem
   letter-spacing: -0.1px
+
+.modal-pay-details__basic-curvature-input
+  border-left: solid 1px white
+  border-right: solid 1px white
 
 .modal-pay-details__basic-curvature-spin-container,
 .modal-pay-details__optical-strength-spin-container--right
