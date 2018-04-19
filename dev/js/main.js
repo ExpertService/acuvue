@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     svg4everybody({});
 
@@ -6,8 +7,32 @@ $(document).ready(function () {
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        adaptiveHeight: true
+        nextArrow: '<i class="right-arrow"></i>',
+        prevArrow: '<i class="left-arrow"></i>',
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 300,
+                settings: "slick"
+            }
+        ]
     });
+
+    $(window).resize(function () {
+        $('.modal-addpoints__article-container').not('.slick-initialized').slick('resize');
+    });
+
+    //продолжение костыля для slick-slider
+    // slideDetect();
+    // $(window).resize(function() {
+    //     slideDetect()
+    // });
+
+
 
     (function() {
         jQuery('.custom-navbar__toggle-nav').click(function (e) {

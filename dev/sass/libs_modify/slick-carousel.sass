@@ -1,0 +1,56 @@
+.slick-slide
+  outline: none
+
+.right-arrow
+  z-index: 3
+  position: absolute
+  right: 1rem
+  top: 11rem
+  content: ''
+  width: 0.425rem
+  height: 0.425rem
+  border-top: 2px solid $mainColor
+  border-right: 2px solid $mainColor
+  background: transparent
+  transform: rotate(45deg)
+
+.left-arrow
+  z-index: 3
+  position: absolute
+  left: 1rem
+  top: 11rem
+  content: ''
+  width: 0.425rem
+  height: 0.425rem
+  border-bottom: 2px solid $mainColor
+  border-left: 2px solid $mainColor
+  background: transparent
+  transform: rotate(45deg)
+
+.slick-dots
+  top: 16rem
+  
+.slick-dots li
+  width: 10px
+  height: 10px
+  
+.slick-dots li button:before
+  width: 10px
+  height: 10px
+  padding: 0
+  content: ''
+  background-image: url(../img/common/unfill-dot-slider.svg)
+  background-position: center center
+  -webkit-background-size:
+  background-size: cover
+  background-repeat: no-repeat
+  opacity: 1
+
+.slick-dots li.slick-active button:before
+  background-image: url(../img/common/fill-dot-slider.svg)
+  background-position: center center
+  -webkit-background-size:
+  background-size: cover
+  background-repeat: no-repeat
+  opacity: 1
+  color: black

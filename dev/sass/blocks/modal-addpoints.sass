@@ -1,4 +1,13 @@
 $labelColor: #b7b7b7
+$slickSlider: 1300px
+
+.modal-background-addpoints
+  .modal-addpoints
+    width: 82.5rem
+@media screen and (max-width:  $toggleMenuWidth)
+  .modal-background-addpoints
+    .modal-addpoints
+      width: 22.5rem
 
 .modal-close-button
   position: absolute
@@ -28,35 +37,42 @@ $labelColor: #b7b7b7
 .modal-addpoints__article-container
   display: flex
   flex-wrap: nowrap
-  div
-    box-sizing: border-box
-    flex-basis: auto
-    flex-grow: 0
-    flex-shrink: 0
-    padding: 0.325rem
-    width: 16.5rem
-    height: 34.313rem
-    font-family: CirceBold
-    h3
-      margin-top: 1.5rem
-      margin-bottom: 0.5rem
-      color: $mainColor
-      font-size: 1.125rem
-      text-transform: capitalize
-    p
-      margin-bottom: 3rem
-      color: $mainColor
-      font-size: 1rem
-    ul
-      color: black
-      font-size: 0.875rem
-      line-height: 1.14
-      li
-        margin-bottom: 0.5rem
-        font-family: CirceRegular
-        font-size: 0.875rem
-        &:first-child
-          margin-top: 1.25rem
+@media screen and (max-width:  1300px)
+  .modal-addpoints__article-container
+    display: block
+
+.modal-addpoints__article
+  box-sizing: border-box
+  flex-basis: auto
+  flex-grow: 0
+  flex-shrink: 0
+  padding: 0.625rem
+  width: 16.5rem
+  height: 34.313rem
+  font-family: CirceBold
+.modal-addpoints__article-caption
+  margin-top: 1.5rem
+  margin-bottom: 0.5rem
+  color: $mainColor
+  font-size: 1.125rem
+  text-transform: capitalize
+.modal-addpoints__article-subcaption
+  margin-bottom: 3rem
+  color: $mainColor
+  font-size: 1rem
+.modal-addpoints__conditions
+  display: block
+  max-height: 15rem
+  color: black
+  font-size: 0.875rem
+  line-height: 1.14
+  overflow: auto
+  li
+    margin-bottom: 0.5rem
+    font-family: CirceRegular
+    font-size: 0.875rem
+    &:first-child
+      margin-top: 1.25rem
 
 .modal-addpoints__article__icon-container
   position: relative
@@ -64,7 +80,7 @@ $labelColor: #b7b7b7
   margin-left: auto
   margin-right: auto
   width: 7.5rem
-  //height: 7.5rem
+  height: 7.5rem
   border-radius: 4.5rem
   background-color: #00468c
 .modal-addpoints__article__icon
@@ -75,3 +91,15 @@ $labelColor: #b7b7b7
   width: 4rem
   height: 4rem
   fill: white
+
+.modal-addpoints__further-button
+  display: none
+  margin-right: auto
+  margin-left: auto
+  margin-top: 1rem
+  width: 7.813rem
+  height: 3.625rem
+  line-height: 3.625rem
+@media screen and (max-width: $slickSlider)
+  .modal-addpoints__further-button
+    display: block
