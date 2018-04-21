@@ -26,14 +26,6 @@ $(document).ready(function () {
         $('.modal-addpoints__article-container').not('.slick-initialized').slick('resize');
     });
 
-    //продолжение костыля для slick-slider
-    // slideDetect();
-    // $(window).resize(function() {
-    //     slideDetect()
-    // });
-
-
-
     (function() {
         jQuery('.custom-navbar__toggle-nav').click(function (e) {
             jQuery(this).toggleClass('custom-navbar__active');
@@ -51,9 +43,14 @@ $(document).ready(function () {
             $('.modal-container-addpoints').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
+        $('.settings__button').click(function(){
+            $('.modal-container-settings').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
+        });
         $('.modal-close-button').click(function(){
             $('.modal-container-lenses-parameters').addClass('disappearing');
             $('.modal-container-addpoints').addClass('disappearing');
+            $('.modal-container-settings').addClass('disappearing');
             $('body').removeClass('modal-active');
         });
     })();
@@ -62,6 +59,11 @@ $(document).ready(function () {
     customInputNumberSpin($('.modal-pay-details__optical-strength-presbyopia-input'));
     customInputNumberSpin($('.modal-pay-details__basic-curvature-input'));
     customInputNumberSpin($('.modal-pay-details__axis-input'));
+
+    customPasswordField($('.input-password__container'));
+
+    customCheckBox($('.modal-settings__sms-notify'));
+    customCheckBox($('.modal-settings__email-notify'));
 
     (function () {
         $(".custom-select").each(function() {

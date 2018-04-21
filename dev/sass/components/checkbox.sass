@@ -1,0 +1,46 @@
+//.checkbox-text
+//  display: block
+//  margin-bottom: 17px
+//  padding-left: 37px
+//  height: 25px
+//  font-size: 14px
+//  font-weight: bolder
+//  color: #e1e1e1
+//  user-select: none
+//
+//.checkbox
+//  display: none
+//  &:checked
+//    & +.checkbox-text
+//      color: #000
+
+.custom-checkbox__label
+  font-size: 0.875rem
+  color: black
+  user-select: none
+  cursor: pointer
+  .custom-checkbox__icon-container
+    position: relative
+    top: -1px
+    float: left
+    margin-right: 8px
+    width: 20px
+    height: 20px
+    svg
+      position: absolute
+      top: 0
+      left: 0
+      width: 20px
+      height: 20px
+
+.custom-checkbox__container
+  display: block
+  height: 20px
+  line-height: 20px
+  text-align: left
+.custom-checkbox__checkbox
+  position: absolute
+  z-index: -1
+  width: 0
+  height: 0
+  opacity: 0
