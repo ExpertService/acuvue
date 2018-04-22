@@ -1,0 +1,39 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Вход'
+	- var pageClass = 'login-page'
+
+block content
+	section.login-registration-section
+		.custom-tabs
+			//input(checked="checked" id="enterTab" type="radio" name="customTabs")
+			//input(id="registrationTab" type="radio" name="customTabs")
+			nav
+				ul
+					li(class="first-tab active-tab") Войти
+						//label(for="enterTab") Войти
+							//span Войти
+					li(class="second-tab") Регистрация
+						//label(for="registrationTab") Регистрация
+							//span Регистрация
+			section
+				div(class="first-tab-content")
+					.login__container
+						label(for="inputPhoneNumber").login__phone-label Номер телефона
+						.login__inputs-container
+							+icon('ic-mobile', 'login__phone-icon')
+							input(type="tel" id="inputPhoneNumber" placeholder="Телефон").login__field-phone
+							input(type="password" id="inputPassword" placeholder="Пароль").login__field-password
+							.show-hide-password-button
+								+icon('ic-eye-close', 'show-password-icon')
+								+icon('ic-eye-open', 'hide-password-icon')
+							a(href="javascript:void(0);" class="login__enter-button") Войти
+							a(href="javascript:void(0);" class="login__fogot-password") Забыли пароль?
+				div(class="second-tab-content")
+					h2 Second
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore error repellendus officiis aliquid a, vitae reprehenderit, accusantium vero, ad. Obcaecati numquam sapiente cupiditate. Praesentium eaque, quae error!
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maiores.
+
+	section.login-foto-section
+

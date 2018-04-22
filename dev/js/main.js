@@ -26,6 +26,7 @@ $(document).ready(function () {
         $('.modal-addpoints__article-container').not('.slick-initialized').slick('resize');
     });
 
+
     (function() {
         jQuery('.custom-navbar__toggle-nav').click(function (e) {
             jQuery(this).toggleClass('custom-navbar__active');
@@ -33,6 +34,7 @@ $(document).ready(function () {
             e.preventDefault();
         });
     })();
+
 
     (function () {
         $('.lenses-parameters__change-parameters-button').click(function(){
@@ -61,9 +63,17 @@ $(document).ready(function () {
     customInputNumberSpin($('.modal-pay-details__axis-input'));
 
     customPasswordField($('.input-password__container'));
+    customShowPassword($('.login__field-password'));
 
     customCheckBox($('.modal-settings__sms-notify'));
     customCheckBox($('.modal-settings__email-notify'));
+
+    customTabs($('.custom-tabs'));
+
+
+    $(function(){
+        $("#inputPhoneNumber").mask("+7(999) 999-9999");
+    });
 
     (function () {
         $(".custom-select").each(function() {

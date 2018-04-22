@@ -3,8 +3,11 @@ module.exports = function() {
         return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js',
                             'dev/js/libs/customInputNumberSpin.js',
                             'node_modules/slick-carousel/slick/slick.min.js',
+                            'dev/js/libs/jquery.maskedinput.js',
                             'dev/js/libs/passwordfield.js',
-                            'dev/js/libs/custom_checkbox.js'
+                            'dev/js/libs/showpassword.js',
+                            'dev/js/libs/custom_checkbox.js',
+                            'dev/js/libs/customTabs.js'
                             ])
             .pipe($.gp.concat('libs.min.js'))
             .pipe($.gulp.dest('./build/js/'))
@@ -17,8 +20,11 @@ module.exports = function() {
         return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js',
                             'dev/js/libs/customInputNumberSpin.js',
                             'node_modules/slick-carousel/slick/slick.min.js',
+                            'dev/js/libs/jquery.maskedinput.js',
                             'dev/js/libs/passwordfield.js',
-                            'dev/js/libs/custom_checkbox.js'
+                            'dev/js/libs/showpassword.js',
+                            'dev/js/libs/custom_checkbox.js',
+                            'dev/js/libs/customTabs.js'
                             ])
             .pipe($.gp.concat('libs.min.js'))
             .pipe($.gp.uglifyjs())

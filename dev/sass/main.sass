@@ -3,6 +3,7 @@
 @import 'common/mixins.sass'
 @import 'common/libs.sass'
 
+
 html
   font-size: $baseFontSize
   height: 100%
@@ -35,12 +36,12 @@ a
   padding-top: 5rem
   overflow: auto
   //min-height: 38rem
-
 @media screen and (max-width:  $tabletWidth)
   .content
     flex-wrap: wrap
 @media screen and (max-width:  $toggleMenuMobile)
     margin-top: 5rem
+
 
 //Изменение стилей библиотек
 @import "libs_modify/libs_modify.sass"
@@ -54,6 +55,8 @@ a
 // СТРАНИЦЫ
 // Главная страница
 @import 'pages/index.sass'
+//страница входа
+@import 'pages/login.sass'
 
 //общие медиазапросы
 @import 'common/media.sass'
