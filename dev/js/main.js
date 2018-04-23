@@ -72,6 +72,17 @@ $(document).ready(function () {
 
     customTabs($('.custom-tabs'));
 
+    $('#additionalRegistrationForm').quickWizard({
+            nextButton : '#form-wizard-next',
+            prevButton : '#form-wizard-prev',
+            element: 'section',
+            breadCrumb: false
+        }
+    );
+
+    // $("#additionalRegistrationForm").validate({
+    //     debug: true
+    // });
 
     $(function(){
         $("#inputPhoneNumber").mask("+7(999) 999-9999");

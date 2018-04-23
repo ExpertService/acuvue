@@ -1,0 +1,30 @@
+extends ../layout/login
+
+block variables
+	- var title = 'Регистрация'
+	- var pageClass = 'registration-page'
+
+block content
+	section.additional-registration-section
+		a(href="#" class="backwards-arrow" id="form-wizard-prev")
+			+icon('ic_arrow-handle', 'backwards-arrow__icon')
+			span Вернуться
+		form(id="additionalRegistrationForm", method="get", action="#", role="form").additional-registration__form
+			section
+				h1 Регистрация
+				.additional-registration__input-name-container.custom-input__container
+					label(for="inputNameRegistration").additional-registration__name-label.custom-input__label Имя
+						.custom-input__validation-output-container
+							span.custom-input__validation-output-field Неверное имя
+						.custom-input__inputs-container
+							input(type="text" id="inputNameRegistration" placeholder="Имя").additional-registration__field-name.custom-input__field
+							input(type="text" id="inputSurnameRegistration" placeholder="Фамилия").additional-registration__field-surname.custom-input__field
+			section
+				h1 Параметры глаз
+			section
+				h1 Подтверждение регистрации
+			button(type="button" id="form-wizard-next").additional-registration__next-button.button-save-type Далее
+			button(type="submit").additional-registration-button.button-save-type Зарегистрироваться
+
+	section.login-foto-section
+
