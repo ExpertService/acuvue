@@ -19,8 +19,61 @@ block content
 						.custom-input__inputs-container
 							input(type="text" id="inputNameRegistration" placeholder="Имя").additional-registration__field-name.custom-input__field
 							input(type="text" id="inputSurnameRegistration" placeholder="Фамилия").additional-registration__field-surname.custom-input__field
+
+				.additional-registration__city-container.custom-input__container
+					label.additional-registration__select-label.custom-input__label Выберите город
+						.custom-input__validation-output-container
+							span.custom-input__validation-output-field Неверный номер телефона
+					.additional-registration__city-select-container
+						select(name="city" id="city" class="custom-select additional-registration__city" placeholder="Город")
+							option(value="Москва") Москва
+							option(value="Санкт-Петербург") Санкт-Петербург
+							option(value="Пенза") Пенза
+							option(value="Мурманск") Мурманск
+							option(value="Калининград") Калининград
+					.additional-registration__trade-network-select-container
+						//label.additional-registration__select-label.custom-input__label Выберите город
+						select(name="tradeNetwork" id="tradeNetwork" class="custom-select additional-registration__trade-network" placeholder="Торговая сеть")
+							option(value="Москва") Москва
+							option(value="Санкт-Петербург") Санкт-Петербург
+							option(value="Пенза") Пенза
+							option(value="Мурманск") Мурманск
+							option(value="Калининград") Калининград
+
+				.custom-checkbox__container.additional-registration__accept-conditions
+					label.custom-checkbox__label Я принимаю условия проведения акции
+						input(type="checkbox" checked="unchecked" name="accept-conditions" value="accept-conditions").custom-checkbox__checkbox
+						.custom-checkbox__icon-container
+							+icon('check', 'custom-checkbox__checked-icon')
+							+icon('uncheck', 'custom-checkbox__unchecked-icon')
+				.custom-checkbox__container.additional-registration__agreement-personal-data
+					label.custom-checkbox__label Я даю согласие на сбор, хранение и обработку своих персональных данных. Я подтверждаю, что ознакомлен (а) с моими правами, предусмотренными Федеральным законом РФ №152 «О персональных данных и политикой конфиденциальности».
+						input(type="checkbox" checked="unchecked" name="agreement-personal-data" value="agreement-personal-data").custom-checkbox__checkbox
+						.custom-checkbox__icon-container
+							+icon('check', 'custom-checkbox__checked-icon')
+							+icon('uncheck', 'custom-checkbox__unchecked-icon')
+				.custom-checkbox__container.additional-registration__agreement-sms
+					label.custom-checkbox__label Я даю согласие на получение смс сообщений и рассылок на мой адрес электронной почты с целью направления мне информации, связанной с проведением акции, а так же информирования меня о регистрации на сайте или внесения изменений в мои данные как участника Программы лояльности ACUVUE.
+						input(type="checkbox" checked="unchecked" name="agreement-sms" value="agreement-sms").custom-checkbox__checkbox
+						.custom-checkbox__icon-container
+							+icon('check', 'custom-checkbox__checked-icon')
+							+icon('uncheck', 'custom-checkbox__unchecked-icon')
+
 			section
-				h1 Параметры глаз
+				.custom-tabs
+					nav
+						ul
+							li(class="first-tab additional-registration__left-eye-tab active-tab") Левый
+								+icon('ic_eye-b-open', 'eye-parameters__icon')
+								.custom-tabs-underliner
+							li(class="second-tab additional-registration__right-eye-tab") Правый
+								.custom-tabs-underliner
+					section
+						div(class="first-tab-content additional-registration__left-eye-tab-content")
+
+
+						div(class="second-tab-content")
+
 			section
 				h1 Подтверждение регистрации
 			button(type="button" id="form-wizard-next").additional-registration__next-button.button-save-type Далее

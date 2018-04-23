@@ -12,7 +12,7 @@
   padding-right: 7rem
   width: 50%
   //max-width: 50rem
-  min-height: 35rem
+  min-height: 45rem
   color: white
   background: radial-gradient(100% 120% at 190% 50%, rgba(0,163,224,0.1) 0%, rgba(0,0,0,00) 99.9%,rgba(0,163,224,1) 100%)
 
@@ -43,5 +43,98 @@
 
 .additional-registration__form
   width: 100%
+  height: auto
+  section
+    h1
+      margin-bottom: 1rem
+.form-wizard-disabled
+  display: none
+
+.form-wizard-active
+  margin-bottom: 2rem
+
+.additional-registration__field-name
+  padding-left: 1rem
+  padding-right: 1rem
+  width: 50%
+  border-right: solid 1px $mainColor
+  border-radius: 8px 0 0 8px
+
+.additional-registration__field-surname
+  padding-left: 1rem
+  padding-right: 1rem
+  width: 50%
+  border-radius: 0 8px 8px 0
+
+.additional-registration__city-container
+  margin-bottom: 1rem
+
+.additional-registration__city-select-container
+  position: absolute
+  top: 1.6rem
+  left: 0%
+  display: inline-block
+  width: 50%
+  & .custom-select
+    border-radius: 8px 0 0 8px
+    border: none
+  & .custom-select-trigger
+    border-radius: 8px 0 0 8px
+    border: none
+    border-right: solid 1px $mainColor
+
+.additional-registration__trade-network-select-container
+  position: absolute
+  top: 1.6rem
+  left: 50%
+  display: inline-block
+  width: 50%
+  & .custom-select
+    border-radius: 0 8px 8px 0
+    border: none
+  & .custom-select-trigger
+    border-radius: 0 8px 8px 0
+    border: none
+
+.additional-registration__city-select-container,
+.additional-registration__trade-network-select-container
+  .custom-options
+    padding-left: 1rem
+  & .custom-options-caption
+    top: 115%
+
+.additional-registration__accept-conditions,
+.additional-registration__agreement-personal-data,
+.additional-registration__agreement-sms
+  margin-bottom: 0.75rem
+  label
+    color: white
+
+.custom-checkbox__container.additional-registration__agreement-personal-data,
+.custom-checkbox__container.additional-registration__agreement-sms
+  height: auto
 
 
+//.eye-parameters__icon
+//  display: inline-block
+//  margin-right: 0.75rem
+//  width: 5.313rem
+//  height: 4.625rem
+//  text-align: center
+//  vertical-align: bottom
+
+.additional-registration__left-eye-tab
+  margin-left: 3.5rem
+  .eye-parameters__icon
+    position: absolute
+    top: -15%
+    left: -3.5rem
+    width: 2.5rem
+    height: 2.5rem
+  &.active-tab
+    margin-left: 6.313rem
+    .eye-parameters__icon
+      top: -40%
+      left: -6.313rem
+      width: 5.313rem
+      height: 4.625rem

@@ -18,7 +18,7 @@ block content
 						//label(for="registrationTab") Регистрация
 							//span Регистрация
 			section
-				div(class="first-tab-content")
+				div(class="first-tab-content login-registration__login-tab")
 					form(id="login-form", method="get", action="./index.html", role="form").login__form
 						.login__container
 							label(for="inputPhoneNumber").login__phone-label Номер телефона
@@ -32,7 +32,7 @@ block content
 								button(type="submit").login__enter-button.button-save-type Войти
 								//a(href="index.html" class="login__enter-button") Войти
 								a(href="./restore-password.html" class="login__fogot-password") Забыли пароль?
-				div(class="second-tab-content")
+				div(class="second-tab-content login-registration__registration-tab")
 					form(id="registration-form", method="get", action="./confirm-email.html", role="form").registration__form
 						.registration__container
 							.registration__input-phone-container.custom-input__container

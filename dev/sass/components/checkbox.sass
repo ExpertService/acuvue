@@ -19,22 +19,26 @@
   color: black
   user-select: none
   cursor: pointer
-  .custom-checkbox__icon-container
-    position: relative
-    top: -1px
-    float: left
-    margin-right: 8px
+
+.custom-checkbox__icon-container
+  position: absolute
+  top: -1px
+  left: 0px
+  float: left
+  //margin-right: 15px
+  width: 20px
+  height: 20px
+  svg
+    position: absolute
+    top: 0
+    left: 0
     width: 20px
     height: 20px
-    svg
-      position: absolute
-      top: 0
-      left: 0
-      width: 20px
-      height: 20px
 
 .custom-checkbox__container
+  position: relative
   display: block
+  padding-left: 32px
   height: 20px
   line-height: 20px
   text-align: left

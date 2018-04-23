@@ -69,6 +69,9 @@ $(document).ready(function () {
 
     customCheckBox($('.modal-settings__sms-notify'));
     customCheckBox($('.modal-settings__email-notify'));
+    customCheckBox($('.additional-registration__accept-conditions'));
+    customCheckBox($('.additional-registration__agreement-personal-data'));
+    customCheckBox($('.additional-registration__agreement-sms'));
 
     customTabs($('.custom-tabs'));
 
