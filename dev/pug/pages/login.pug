@@ -1,4 +1,4 @@
-extends ../layout/main
+extends ../layout/login
 
 block variables
 	- var title = 'Вход'
@@ -7,33 +7,61 @@ block variables
 block content
 	section.login-registration-section
 		.custom-tabs
-			//input(checked="checked" id="enterTab" type="radio" name="customTabs")
-			//input(id="registrationTab" type="radio" name="customTabs")
 			nav
 				ul
 					li(class="first-tab active-tab") Войти
+						.custom-tabs-underliner
 						//label(for="enterTab") Войти
 							//span Войти
 					li(class="second-tab") Регистрация
+						.custom-tabs-underliner
 						//label(for="registrationTab") Регистрация
 							//span Регистрация
 			section
 				div(class="first-tab-content")
-					.login__container
-						label(for="inputPhoneNumber").login__phone-label Номер телефона
-						.login__inputs-container
-							+icon('ic-mobile', 'login__phone-icon')
-							input(type="tel" id="inputPhoneNumber" placeholder="Телефон").login__field-phone
-							input(type="password" id="inputPassword" placeholder="Пароль").login__field-password
-							.show-hide-password-button
-								+icon('ic-eye-close', 'show-password-icon')
-								+icon('ic-eye-open', 'hide-password-icon')
-							a(href="javascript:void(0);" class="login__enter-button") Войти
-							a(href="javascript:void(0);" class="login__fogot-password") Забыли пароль?
+					form(id="login-form", method="get", action="./index.html", role="form").login__form
+						.login__container
+							label(for="inputPhoneNumber").login__phone-label Номер телефона
+							.login__inputs-container
+								+icon('ic-mobile', 'login__phone-icon')
+								input(type="tel" id="inputPhoneNumber" placeholder="Телефон").login__field-phone
+								input(type="password" id="inputPassword" placeholder="Пароль").login__field-password
+								.show-hide-password-button
+									+icon('ic-eye-close', 'show-password-icon')
+									+icon('ic-eye-open', 'hide-password-icon')
+								button(type="submit").login__enter-button.button-save-type Войти
+								//a(href="index.html" class="login__enter-button") Войти
+								a(href="javascript:void(0);" class="login__fogot-password") Забыли пароль?
 				div(class="second-tab-content")
-					h2 Second
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore error repellendus officiis aliquid a, vitae reprehenderit, accusantium vero, ad. Obcaecati numquam sapiente cupiditate. Praesentium eaque, quae error!
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maiores.
+					form(id="registration-form", method="get", action="./confirm-email.html", role="form").registration__form
+						.registration__container
+							.registration__input-phone-container.custom-input__container
+								label(for="inputPhoneNumberRegistration").registration__phone-label.custom-input__label Номер телефона
+									.custom-input__validation-output-container
+										span.custom-input__validation-output-field Неверный номер телефона
+									.custom-input__inputs-container
+										+icon('ic-mobile', 'custom-input__icon login__phone-icon')
+										input(type="tel" id="inputPhoneNumberRegistration" placeholder="Телефон").registration__field-phone.custom-input__field
+							.registration__input-email-container.custom-input__container
+								label(for="inputEmailRegistration").registration__email-label.custom-input__label Электронная почта
+									.custom-input__validation-output-container
+										span.custom-input__validation-output-field Неверный формат
+									.custom-input__inputs-container
+										+icon('ic-mail', 'custom-input__icon login__mail-icon')
+										input(type="tel" id="inputEmailRegistration" placeholder="Электронная почта").registration__field-email.custom-input__field
+							.registration__input-password-container.input-password__container
+								label(for="inputPasswordNewRegistration").input-password__new-label Новый пароль
+								label(for="inputPasswordRepeatRegistration").input-password__repeat-label Повторите пароль
+								.input-password__validation-output-container
+									span.input-password__validation-output-field Неверный пароль
+								.input-password__inputs-container
+									+icon('Group-3', 'input-password__password-icon')
+									input(type="password" id="inputPasswordNewRegistration").registration__input-password-new.input-password__field-new
+									input(type="password" id="inputPasswordRepeatRegistration").registration__input-password-repeat.input-password__field-repeat
+									.input-password__show-hide-password-button
+										+icon('ic-eye-close', 'input-password__show-password-icon')
+										+icon('ic-eye-open', 'input-password__hide-password-icon')
+							button(type="submit").registration__register-button.button-save-type Зарегистрироваться
 
 	section.login-foto-section
 

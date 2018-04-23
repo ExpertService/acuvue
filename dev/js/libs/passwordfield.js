@@ -15,7 +15,9 @@
         });
 
         function init(el) {
-            els.OKPasswordButton.on('click', validatePassword);
+            if(els.OKPasswordButton) {
+                els.OKPasswordButton.on('click', validatePassword);
+            }
             els.showHidePasswordButton.on('click', showHidePassword);
 
             function validatePassword() {

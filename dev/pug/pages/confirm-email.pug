@@ -1,0 +1,14 @@
+extends ../layout/login
+
+block variables
+	- var title = 'Вход'
+	- var pageClass = 'login-page'
+
+block content
+	section.notification-confirm-email-section
+		.notification-confirm-email-container
+			h1 Подтвердите E-mail
+			p.notification-confirm-email__message На указанный вами адрес электронной почты выслано письмо для подтверждения регистрации. Перейдите по ссылке, чтобы задать новый пароль
+			button(type="button").notification-confirm-email__button.button-save-type Понятно
+	section.login-foto-section
+

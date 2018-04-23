@@ -62,7 +62,9 @@ $(document).ready(function () {
     customInputNumberSpin($('.modal-pay-details__basic-curvature-input'));
     customInputNumberSpin($('.modal-pay-details__axis-input'));
 
-    customPasswordField($('.input-password__container'));
+    customPasswordField($('.modal-settings__input-password-container'));
+    customPasswordField($('.registration__input-password-container'));
+
     customShowPassword($('.login__field-password'));
 
     customCheckBox($('.modal-settings__sms-notify'));
@@ -73,6 +75,7 @@ $(document).ready(function () {
 
     $(function(){
         $("#inputPhoneNumber").mask("+7(999) 999-9999");
+        $("#inputPhoneNumberRegistration").mask("+7(999) 999-9999");
     });
 
     (function () {

@@ -1,35 +1,7 @@
-
-
-
-
-///* Component Needs */
-//
-//.custom-tabs > input,
-//.custom-tabs section > div
-//  display: none
-//
-//
-//#enterTab:checked ~ section .enter-tab,
-//#registrationTab:checked ~ section .registration-tab
-//  display: block
-//
-//
-//#enterTab:checked ~ nav .enter-tab,
-//#registrationTab:checked ~ nav .registration-tab
-//  color: red
-//
-//
-///* Visual Styles */
-//
-//$activeColor: #ffffff
-//$unactiveColor: #eeeeee
-//$unactiveHoverColor: #dddddd
-//
-//
 .custom-tabs
   box-sizing: border-box
   width: 100%
-  height: 100%
+  //height: 100%
   ul
     display: flex
     align-items: baseline
@@ -38,25 +10,34 @@
     padding: 0
     .first-tab,
     .second-tab
+      flex-basis: auto
+      flex-grow: 0
+      flex-shrink: 1
+      position: relative
       display: inline-block
-      float: left
-      //padding: 15px 25px
-      //border: 1px solid #ddd
-      //border-bottom: 0
-      //background: $unactiveColor
-      //min-width: 8.188rem
       height: 3.7rem
       font-family: CirceBold
       font-size: 1.75rem
       color: rgba(255,255,255,0.5)
       cursor: pointer
       user-select: none
+      .custom-tabs-underliner
+        position: absolute
+        top: 80%
+        width: 100%
+        height: 5px
+        background-color: white
+        display: none
       &:hover
         //background: $unactiveHoverColor
       &.active-tab
         font-size: 2.5rem
         color: white
-          //background: $activeColor
+        .custom-tabs-underliner
+          display: block
+.first-tab
+  width: 7rem
+  margin-right: 2.25rem
 
   section
     box-sizing: border-box
@@ -64,17 +45,6 @@
     clear: both
     div.first-tab-content,
     div.second-tab-content
-      //padding: 20px
       width: 100%
-      line-height: 1.5em
-      letter-spacing: 0.3px
-      color: #444
-
-//
-//#enterTab:checked ~ nav .enter-tab,
-//#registrationTab:checked ~ nav .registration-tab
-//  label
-//    font-size: 2.5rem
-//    color: white
-//    //position: relative
-//
+.second-tab-content
+  display: none
