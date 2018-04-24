@@ -32,7 +32,8 @@
     height: calc(100vh)
 
 
-.modal-container-settings
+.modal-container-settings,
+.modal-container-action-lens
   position: fixed
   display: flex
   height: calc(100vh - 6rem - 5rem)
@@ -43,23 +44,28 @@
   z-index: 3
   &.appearing
     transform: scale(1)
-    .modal-background-settings
+    .modal-background-settings,
+    .modal-background-action-lens
       background: rgba(0,0,0,.0)
       animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
-      .modal-settings
+      .modal-settings,
+      .modal-action-lens
         transform: translateX(-1500px)
         animation: roadRunnerIn .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
     &.disappearing
-      animation: quickScaleDown 0s .5s linear forwards
-      .modal-background-settings
-        animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
-        .modal-settings
-          animation: roadRunnerOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+      animation: quickScaleDown 0s .8s linear forwards
+      .modal-background-settings,
+      .modal-background-action-lens
+        animation: fadeOut .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+        .modal-settings,
+        .modal-action-lens
+          animation: roadRunnerOut .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
       
 
 .modal-background-lenses-parameters,
 .modal-background-addpoints,
-.modal-background-settings
+.modal-background-settings,
+.modal-background-action-lens
   flex-basis: auto
   flex-grow: 1
   flex-shrink: 1
@@ -75,7 +81,8 @@
   overflow-y: auto
   .modal-lenses-parameters,
   .modal-addpoints,
-  .modal-settings
+  .modal-settings,
+  .modal-action-lens
     position: relative
     display: inline-block
     padding: 1.5rem
@@ -88,7 +95,8 @@
   .modal-background-addpoints
     align-items: flex-start
 
-.modal-background-settings
+.modal-background-settings,
+.modal-background-action-lens
   justify-content: flex-end
 
 @keyframes unfoldIn

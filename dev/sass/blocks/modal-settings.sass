@@ -4,10 +4,17 @@ $labelColor: #b7b7b7
   .modal-settings
     box-sizing: border-box
     padding-top: 3.75rem
-    padding-left: 5.875rem
+    padding-left: 7.875rem
     height: 100%
     width: 65%
     background: radial-gradient(100% 120% at 100% 50%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 99.9%,rgba(0,163,224,0) 100%)
+  @media screen and (max-width:  $tabletWidth)
+    .modal-settings
+      padding-top: 3.75rem
+      padding-left: 3.75rem
+      width: 100%
+      background: white
+
 .modal-close-button
   position: absolute
   top: 1.5rem
@@ -28,6 +35,27 @@ $labelColor: #b7b7b7
   color: $mainColor
   font-size: 1.75rem
   text-align: left
+
+.setting-password-form__old-password-container
+  position: relative
+  text-align: left
+  .setting-password-form__input-old-password-container
+    display: inline-block
+    width: 40%
+    .custom-input__inputs-container
+      border: solid 1px #dcdcdc
+
+.setting-password-form__change-button
+  position: absolute
+  left: 43%
+  bottom: 1.25rem
+  z-index: 2
+
+
+
+.setting-password-form__new-password-container
+  max-width: 35rem
+  display: none
 
 .modal-settings__input-password-container
   margin-left: -2px

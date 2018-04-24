@@ -35,6 +35,7 @@ $(document).ready(function () {
         });
     })();
 
+
     (function() {
         $('input[type=radio][name=lenses-for-correction-right-eye]').change(function() {
             if (this.value == 'astigmatismRightEye') {
@@ -75,6 +76,14 @@ $(document).ready(function () {
     })();
 
     (function () {
+        $('.setting-password-form__change-button').click(function(){
+            $('.setting-password-form__new-password-container').show();
+            $('.setting-password-form__old-password-container').hide();
+        });
+    })();
+
+    //анимация
+    (function () {
         $('.lenses-parameters__change-parameters-button').click(function(){
             $('.modal-container-lenses-parameters').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
@@ -85,13 +94,45 @@ $(document).ready(function () {
         });
         $('.settings__button').click(function(){
             $('.modal-container-settings').removeClass('disappearing').addClass('appearing');
+            $('.setting-password-form__new-password-container').hide();
+            $('.setting-password-form__old-password-container').show();
             $('body').addClass('modal-active');
         });
+
+        $('.action-lens-link').click(function(){
+            $('.modal-container-action-lens').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
+        });
+
         $('.modal-close-button').click(function(){
             $('.modal-container-lenses-parameters').addClass('disappearing');
             $('.modal-container-addpoints').addClass('disappearing');
             $('.modal-container-settings').addClass('disappearing');
+            $('.modal-container-action-lens').addClass('disappearing');
             $('body').removeClass('modal-active');
+        });
+    })();
+
+    //карточки линз
+    (function () {
+        $('.modal-action-lens__lens-item').focus(function(){
+            $('.modal-action-lens__order-caption').show();
+            $('.modal-action-lens__caption').hide();
+            $('.modal-action-lens__order-button').show();
+            $('.modal-action-lens__save-button').hide();
+            $('.modal-action-lens__lens-item').not(this).fadeTo(0, 0.3);
+            $(this).toggleClass('modal-action-lens__lens-item--animate');
+            //$(this).animate({"top": "+=5px"}, "slow");
+            //$('.modal-action-lens__lens-list-container').toggleClass('modal-action-lens__lens-list-container-opacity');
+        });
+        $('.modal-action-lens__lens-item').focusout(function(){
+            $('.modal-action-lens__order-caption').hide();
+            $('.modal-action-lens__caption').show();
+            $('.modal-action-lens__order-button').hide();
+            $('.modal-action-lens__save-button').show();
+            $('.modal-action-lens__lens-item').not(this).fadeTo(0, 1);
+            $(this).toggleClass('modal-action-lens__lens-item--animate');
+            //$('.modal-action-lens__lens-list-container').toggleClass('modal-action-lens__lens-list-container-opacity');
         });
     })();
 
