@@ -22,25 +22,34 @@
                 input(class="modal-pay-details__lenses-for-correction" id="astigmatismCorrection" type="radio" name="lenses-for-correction" value="astigmatism")
                 label(for="astigmatismCorrection") Линзы для коррекции астигматизма
 
-            .modal-pay-details__axis-container
-                label.modal-pay-details__select-label Ось
-                select(name="axes" id="axes" class="custom-select axes" placeholder="Ось")
-                    option(value="1") 1
-                    option(value="2") 2
-                    option(value="3") 3
-                    option(value="4") 4
-                    option(value="5") 5
+            .modal-pay-details__lenses-for-correction-astigmatism-parameters
+                .modal-pay-details__axis-container
+                    label.modal-pay-details__select-label Ось
+                    select(name="axes" id="axes" class="custom-select axes" placeholder="Ось")
+                        option(value="1") 1
+                        option(value="2") 2
+                        option(value="3") 3
+                        option(value="4") 4
+                        option(value="5") 5
 
-            .modal-pay-details__optical-strength-spin-container--right
-                label.modal-pay-details__input-label Оптическая сила сферы
-                .input-number-container
-                    span.input-number-decrement -
-                    input(class="input-number modal-pay-details__optical-strength-presbyopia-input" type="text" value="+3.25D" step="0.05" postfix="D" prefix="+")
-                    span.input-number-increment +
+                .modal-pay-details__optical-strength-spin-container--right
+                    label.modal-pay-details__input-label Оптическая сила сферы
+                    .input-number-container
+                        span.input-number-decrement -
+                        input(class="input-number modal-pay-details__optical-strength-presbyopia-input" type="text" value="+3.25D" step="0.05" postfix="D" prefix="+")
+                        span.input-number-increment +
 
             .modal-pay-details__lenses-for-correction-presbyopia
                 input(class="modal-pay-details__lenses-for-correction" id="presbyopiaCorrection" type="radio" name="lenses-for-correction" value="presbyopia")
                 label(for="presbyopiaCorrection") Линзы для коррекции пресбиопии
+
+            .modal-pay-details__lenses-for-correction-presbyopia-parameters
+                .modal-pay-details__addidation-container
+                    label.modal-pay-details__select-label Аддидация
+                    select(name="axes" id="addidation" class="custom-select addidation" placeholder="Аддидация")
+                        option(value="1") от +2.00D до 2.50D
+                        option(value="2") от +2.50D до 3.00D
+                        option(value="3") от +3.00D до 3.50D
 
             a(href="javascript:void(0);" class="modal-pay-details__further-button button-save-type") Далее
 

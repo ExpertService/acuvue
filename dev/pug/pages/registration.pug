@@ -123,12 +123,7 @@ block content
 									span.input-number-decrement -
 									input(class="input-number additional-registration__right-eye-optical-strength-input" id="opticalStrengthRightEye" type="text" value="+3.25D" step="0.05" postfix="D" prefix="+")
 									span.input-number-increment +
-							//.custom-checkbox__container.additional-registration__both-eye-identical
-							//	label.custom-checkbox__label Оба глаза совпадают
-							//		input(type="checkbox" checked="unchecked" name="both-eye-identical" value="both-eye-identical").custom-checkbox__checkbox
-							//		.custom-checkbox__icon-container
-							//			+icon('check', 'custom-checkbox__checked-icon')
-							//			+icon('uncheck', 'custom-checkbox__unchecked-icon')
+
 							.additional-registration__lenses-for-correction-astigmatism
 								input(class="additional-registration__lenses-for-correction" id="astigmatismCorrectionRightEye" type="radio" name="lenses-for-correction-right-eye" value="astigmatismRightEye")
 								label(for="astigmatismCorrectionRightEye") Линзы для коррекции астигматизма
@@ -157,15 +152,16 @@ block content
 							.additional-registration__lenses-for-correction-presbyopia-right-eye-parameters
 								.additional-registration__addidation-container
 									label.additional-registration__select-label Аддидация
-									select(name="axes" id="addidationRightEye" class="custom-select axes" placeholder="Аддидация")
+									select(name="axes" id="addidationRightEye" class="custom-select" placeholder="Аддидация")
 										option(value="1") от +2.00D до 2.50D
 										option(value="2") от +2.50D до 3.00D
 										option(value="3") от +3.00D до 3.50D
-										option(value="4") от +3.50D до 4.00D
 			section
-				h1 Подтверждение регистрации
+				.notify-container
+					h1 Пароль выслан
+					p.notify__message На указанный вами адрес электронной почты выслано письмо с ссылкой для восстановления пароля. Перейдите по ссылке, чтобы задать новый пароль.
 			button(type="button" id="form-wizard-next").additional-registration__next-button.button-save-type Далее
-			button(type="submit").additional-registration-button.button-save-type Зарегистрироваться
+			button(type="submit").additional-registration-button.button-save-type Понятно
 
 	section.login-foto-section
 

@@ -61,6 +61,19 @@ $(document).ready(function () {
         });
     })();
 
+    (function() {
+        $('input[type=radio][name=lenses-for-correction]').change(function() {
+            if (this.value == 'astigmatism') {
+                $('.modal-pay-details__lenses-for-correction-astigmatism-parameters').css('display','block');
+                $('.modal-pay-details__lenses-for-correction-presbyopia-parameters').css('display','none');
+            }
+            else if (this.value == 'presbyopia') {
+                $('.modal-pay-details__lenses-for-correction-astigmatism-parameters').css('display','none');
+                $('.modal-pay-details__lenses-for-correction-presbyopia-parameters').css('display','block');
+            }
+        });
+    })();
+
     (function () {
         $('.lenses-parameters__change-parameters-button').click(function(){
             $('.modal-container-lenses-parameters').removeClass('disappearing').addClass('appearing');
