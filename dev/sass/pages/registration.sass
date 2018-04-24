@@ -115,14 +115,6 @@
   height: auto
 
 
-//.eye-parameters__icon
-//  display: inline-block
-//  margin-right: 0.75rem
-//  width: 5.313rem
-//  height: 4.625rem
-//  text-align: center
-//  vertical-align: bottom
-
 .additional-registration__left-eye-tab
   margin-left: 3.5rem
   .eye-parameters__icon
@@ -138,3 +130,75 @@
       left: -6.313rem
       width: 5.313rem
       height: 4.625rem
+
+.additional-registration__left-eye-optical-strength
+  margin-top: 0.5rem
+  margin-bottom: 1.5rem
+  label
+    display: inline-block
+    margin-bottom: 0.475rem
+    padding-left: 1rem
+    width: 100%
+    color: rgba(255,255,255,0.7)
+    font-family: CirceRegular
+    font-size: 0.875rem
+    letter-spacing: -0.1px
+    user-select: none
+
+.additional-registration__both-eye-identical
+  margin-bottom: 1.5rem
+  label
+    color: white
+
+.additional-registration__lenses-for-correction-astigmatism,
+.additional-registration__lenses-for-correction-presbyopia
+  //float: left
+  display: flex
+  align-items: center
+  //margin-top: 1.875rem
+  margin-bottom: 1.5rem
+  width: 100%
+  &
+    label
+      height: 1.5rem
+      font-family: CirceRegular
+      font-size: 0.875rem
+      letter-spacing: -0.1px
+      line-height: 1.5rem
+      color: white
+
+.additional-registration__lenses-for-correction-astigmatism-left-eye-parameters,
+.additional-registration__lenses-for-correction-presbyopia-left-eye-parameters,
+.additional-registration__lenses-for-correction-astigmatism-right-eye-parameters,
+.additional-registration__lenses-for-correction-presbyopia-right-eye-parameters
+  margin-bottom: 1.5rem
+  display: none
+
+.additional-registration__axis-container,
+.additional-registration__addidation-container
+  display: inline-block
+  width: 15rem
+  margin-right: 1.5rem
+  label
+    margin-bottom: 0.5rem
+  .custom-options
+    padding-left: 1rem
+  & .custom-options-caption
+    top: 115%
+
+.additional-registration__optical-strength-spin-container
+  display: inline-block
+  line-height: 2rem
+
+.additional-registration__axis-container,
+.additional-registration__optical-strength-spin-container,
+.additional-registration__addidation-container
+  label
+    display: inline-block
+    padding-left: 1rem
+    width: 100%
+    color: rgba(255,255,255,0.7)
+    font-family: CirceRegular
+    font-size: 0.875rem
+    letter-spacing: -0.1px
+    user-select: none

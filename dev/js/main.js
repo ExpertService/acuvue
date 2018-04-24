@@ -35,6 +35,31 @@ $(document).ready(function () {
         });
     })();
 
+    (function() {
+        $('input[type=radio][name=lenses-for-correction-right-eye]').change(function() {
+            if (this.value == 'astigmatismRightEye') {
+                $('.additional-registration__lenses-for-correction-astigmatism-right-eye-parameters').css('display','block');
+                $('.additional-registration__lenses-for-correction-presbyopia-right-eye-parameters').css('display','none');
+            }
+            else if (this.value == 'presbyopiaRightEye') {
+                $('.additional-registration__lenses-for-correction-astigmatism-right-eye-parameters').css('display','none');
+                $('.additional-registration__lenses-for-correction-presbyopia-right-eye-parameters').css('display','block');
+            }
+        });
+    })();
+
+    (function() {
+        $('input[type=radio][name=lenses-for-correction-left-eye]').change(function() {
+            if (this.value == 'astigmatismLeftEye') {
+                $('.additional-registration__lenses-for-correction-astigmatism-left-eye-parameters').css('display','block');
+                $('.additional-registration__lenses-for-correction-presbyopia-left-eye-parameters').css('display','none');
+            }
+            else if (this.value == 'presbyopiaLeftEye') {
+                $('.additional-registration__lenses-for-correction-astigmatism-left-eye-parameters').css('display','none');
+                $('.additional-registration__lenses-for-correction-presbyopia-left-eye-parameters').css('display','block');
+            }
+        });
+    })();
 
     (function () {
         $('.lenses-parameters__change-parameters-button').click(function(){
@@ -62,6 +87,11 @@ $(document).ready(function () {
     customInputNumberSpin($('.modal-pay-details__basic-curvature-input'));
     customInputNumberSpin($('.modal-pay-details__axis-input'));
 
+    customInputNumberSpin($('.additional-registration__left-eye-optical-strength-input'));
+    customInputNumberSpin($('.additional-registration__right-eye-optical-strength-input'));
+    customInputNumberSpin($('.additional-registration__optical-strength-astigmatism-left-eye-input'));
+    customInputNumberSpin($('.additional-registration__optical-strength-astigmatism-right-eye-input'));
+
     customPasswordField($('.modal-settings__input-password-container'));
     customPasswordField($('.registration__input-password-container'));
 
@@ -72,6 +102,11 @@ $(document).ready(function () {
     customCheckBox($('.additional-registration__accept-conditions'));
     customCheckBox($('.additional-registration__agreement-personal-data'));
     customCheckBox($('.additional-registration__agreement-sms'));
+    customCheckBox($('.additional-registration__both-eye-identical'));
+    customCheckBox($('.additional-registration__astigmatism-correction-checkbox'));
+
+
+
 
     customTabs($('.custom-tabs'));
 
