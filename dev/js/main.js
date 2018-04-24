@@ -107,6 +107,7 @@ $(document).ready(function () {
 
     customPasswordField($('.modal-settings__input-password-container'));
     customPasswordField($('.registration__input-password-container'));
+    customPasswordField($('.restore-password-new__input-password-container'));
 
     customShowPassword($('.login__field-password'));
 
