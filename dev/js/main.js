@@ -82,7 +82,7 @@ $(document).ready(function () {
         });
     })();
 
-    //анимация
+    //анимация модальных окон
     (function () {
         $('.lenses-parameters__change-parameters-button').click(function(){
             $('.modal-container-lenses-parameters').removeClass('disappearing').addClass('appearing');
@@ -111,29 +111,51 @@ $(document).ready(function () {
             $('.modal-container-action-lens').addClass('disappearing');
             $('body').removeClass('modal-active');
         });
+
+        $('.modal-action-lens__close-button').click(function(){
+            $('.modal-container-action-lens').addClass('disappearing');
+            $('body').removeClass('modal-active');
+        });
     })();
+
+
 
     //карточки линз
     (function () {
-        $('.modal-action-lens__lens-item').focus(function(){
+        $('.modal-action-lens__lens-item').click(function(e){
             $('.modal-action-lens__order-caption').show();
             $('.modal-action-lens__caption').hide();
             $('.modal-action-lens__order-button').show();
-            $('.modal-action-lens__save-button').hide();
+            $('.modal-action-lens__close-button').hide();
             $('.modal-action-lens__lens-item').not(this).fadeTo(0, 0.3);
+            $(this).fadeTo(0, 1);
             $(this).toggleClass('modal-action-lens__lens-item--animate');
-            //$(this).animate({"top": "+=5px"}, "slow");
-            //$('.modal-action-lens__lens-list-container').toggleClass('modal-action-lens__lens-list-container-opacity');
+            $('.modal-action-lens__lens-item').not(this).removeClass('modal-action-lens__lens-item--animate');
+            e.stopPropagation();
         });
-        $('.modal-action-lens__lens-item').focusout(function(){
+
+        $('.modal-action-lens__lens-list-container').click(function(){
+                $('.modal-action-lens__order-caption').hide();
+                $('.modal-action-lens__caption').show();
+                $('.modal-action-lens__order-button').hide();
+                $('.modal-action-lens__close-button').show();
+                $('.modal-action-lens__lens-item').not(this).fadeTo(0, 1);
+                $('.modal-action-lens__lens-item').removeClass('modal-action-lens__lens-item--animate');
+        });
+
+        $('.modal-action-lens__order-button').click(function(){
+            $('.modal-container-action-lens').addClass('disappearing');
+            $('body').removeClass('modal-active');
+            $('.modal-container-lenses-parameters').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
             $('.modal-action-lens__order-caption').hide();
             $('.modal-action-lens__caption').show();
             $('.modal-action-lens__order-button').hide();
-            $('.modal-action-lens__save-button').show();
+            $('.modal-action-lens__close-button').show();
             $('.modal-action-lens__lens-item').not(this).fadeTo(0, 1);
-            $(this).toggleClass('modal-action-lens__lens-item--animate');
-            //$('.modal-action-lens__lens-list-container').toggleClass('modal-action-lens__lens-list-container-opacity');
+            $('.modal-action-lens__lens-item').removeClass('modal-action-lens__lens-item--animate');
         });
+
     })();
 
     customInputNumberSpin($('.modal-pay-details__optical-strength-astigmatism-input'));
@@ -165,6 +187,7 @@ $(document).ready(function () {
 
     customTabs($('.custom-tabs'));
 
+
     $('#additionalRegistrationForm').quickWizard({
             nextButton : '#form-wizard-next',
             prevButton : '#form-wizard-prev',
@@ -173,9 +196,13 @@ $(document).ready(function () {
         }
     );
 
-    // $("#additionalRegistrationForm").validate({
-    //     debug: true
-    // });
+    $('#lensOrderForm').quickWizard({
+            nextButton : '#lensOrderFormNextButton',
+            element: 'section',
+            breadCrumb: false
+        }
+    );
+
 
     $(function(){
         $("#inputPhoneNumber").mask("+7(999) 999-9999");

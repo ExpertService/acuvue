@@ -1,8 +1,56 @@
 .lens-card
-  flex-basis: 16rem
-  flex-grow: 0
+  display: flex
+  align-items: center
+  padding-left: 0.75rem
+  width: 100%
+  height: 100%
+  text-align: left
+
+.lens-card__foto-container
+  flex-basis: auto
   flex-shrink: 0
-  height: 5.75rem
-  border: solid 1px rgba(0, 0, 0, 0.12)
-  border-radius: 8px
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.12)
+  flex-grow: 0
+  margin-right: 0.75rem
+  height: 100%
+  width: 30%
+  background-image: url(../img/content/1468144244.png)
+  -webkit-background-size:
+  background-size: contain
+  background-position: center center
+  background-repeat: no-repeat
+
+.lens-card__description-container
+  flex-basis: auto
+  flex-shrink: 0
+  flex-grow: 0
+  display: inline-flex
+  flex-wrap: wrap
+  align-content: center
+  height: 100%
+  width: 60%
+  text-align: left
+  h3
+    flex-basis: auto
+    flex-shrink: 0
+    flex-grow: 0
+    width: 100%
+    font-size: 0.75rem
+    text-align: left
+
+.lens-card__addition-info
+  flex-basis: auto
+  flex-shrink: 0
+  flex-grow: 0
+  display: inline-block
+  .lens-card__quantity
+    display: inline-block
+    margin-right: 0.25rem
+    color: black
+    font-family: CirceRegular
+    font-size: 0.688rem
+    letter-spacing: 0.4
+    opacity: 0.5
+  .lens-card__points
+    color: black
+    font-family: CirceRegular
+    font-size: 1rem

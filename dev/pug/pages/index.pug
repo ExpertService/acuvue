@@ -6,43 +6,44 @@ block variables
 
 block content
 	section.left-content-block
-		.buttons-bar
-			a(href="javascript:void(0);" class="QR-code__button button-change-parameters-type") Мой QR-код
-			a(href="javascript:void(0);" class="order-QR-card__button button-change-parameters-type") Заказать карту с QR
-			a(href="javascript:void(0);" class="plus-points__button button-change-parameters-type") +20 баллов за друга
-			a(href="javascript:void(0);" class="settings__button button-settings-type") Настройки
-		section.user-data-container
-			.user-data-fio Иванов Иван
-			.user-data-phone +7&nbsp914&nbsp324-21-33
-			.user-data-email mail@mail.corp
-		section.round-indicators-container
-			.round-indicator__container.points-indicator
-				.round-indicator__icon-container
-				//+icon('ic_present', 'round-indicator__icon')
-				.round-indicator__value-container
-					span.round-indicator__value.round-indicator__points-value 87
-					span.round-indicator__text баллов
-					a(href="javascript:void(0);" class="round-indicator__comment") Получить подарок
-			.round-indicator__container.days-indicator
-				.round-indicator__icon-container
-				//+icon('ic_present', 'round-indicator__icon')
-				.round-indicator__value-container
-					span.round-indicator__value.round-indicator__daysleft-value 10
-					span.round-indicator__text дней
-				a(href="javascript:void(0);" class="round-indicator__comment") до следующей покупки
-		section.lenses-parameters__container
-			.lenses-parameters__icon-container
-				//+icon('ic_eye-b-open', 'lenses-parameters__icon')
-			h3.lenses-parameters__caption Параметры ваших линз
-			.lenses-parameters__left-eye
-				span Левый глаз
-				span Оптическая сила:&nbsp
-				span.lenses-parameters__left-eye-optical-strength -3.5D
-			.lenses-parameters__right-eye
-				span Правый глаз
-				span Оптическая сила:&nbsp
-				span.lenses-parameters__right-eye-optical-strength -3.5D
-			a(href="javascript:void(0);" class="lenses-parameters__change-parameters-button button-change-parameters-type") Изменить параметры
+		.left-content-block__wraper
+			.buttons-bar
+				a(href="javascript:void(0);" class="QR-code__button button-change-parameters-type") Мой QR-код
+				a(href="javascript:void(0);" class="order-QR-card__button button-change-parameters-type") Заказать карту с QR
+				a(href="javascript:void(0);" class="plus-points__button button-change-parameters-type") +20 баллов за друга
+				a(href="javascript:void(0);" class="settings__button button-settings-type") Настройки
+			section.user-data-container
+				.user-data-fio Иванов Иван
+				.user-data-phone +7&nbsp914&nbsp324-21-33
+				.user-data-email mail@mail.corp
+			section.round-indicators-container
+				.round-indicator__container.points-indicator
+					.round-indicator__icon-container
+					//+icon('ic_present', 'round-indicator__icon')
+					.round-indicator__value-container
+						span.round-indicator__value.round-indicator__points-value 87
+						span.round-indicator__text баллов
+						a(href="javascript:void(0);" class="round-indicator__comment") Получить подарок
+				.round-indicator__container.days-indicator
+					.round-indicator__icon-container
+					//+icon('ic_present', 'round-indicator__icon')
+					.round-indicator__value-container
+						span.round-indicator__value.round-indicator__daysleft-value 10
+						span.round-indicator__text дней
+					a(href="javascript:void(0);" class="round-indicator__comment") до следующей покупки
+			section.lenses-parameters__container
+				.lenses-parameters__icon-container
+					//+icon('ic_eye-b-open', 'lenses-parameters__icon')
+				h3.lenses-parameters__caption Параметры ваших линз
+				.lenses-parameters__left-eye
+					span Левый глаз
+					span Оптическая сила:&nbsp
+					span.lenses-parameters__left-eye-optical-strength -3.5D
+				.lenses-parameters__right-eye
+					span Правый глаз
+					span Оптическая сила:&nbsp
+					span.lenses-parameters__right-eye-optical-strength -3.5D
+				a(href="javascript:void(0);" class="lenses-parameters__change-parameters-button button-change-parameters-type") Изменить параметры
 	section.right-content-block
 		section.purchase-history
 			.purchase-history__caption-bar

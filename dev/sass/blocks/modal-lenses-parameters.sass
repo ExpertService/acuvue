@@ -1,5 +1,4 @@
 
-
 .modal-background-lenses-parameters
   .modal-lenses-parameters
     width: 31.5rem
@@ -19,8 +18,11 @@
   //stroke: black
   //fill: white
 
+.modal-pay-details__lens-order-form
+  text-align: left
+
 .modal-pay-details__caption
-  margin-bottom: 1rem
+  margin-bottom: 1.5rem
   color: black
   text-align: left
 
@@ -32,6 +34,7 @@
 
 .modal-pay-details__input-label,
 .modal-pay-details__select-label
+  padding-left: 1rem
   margin-bottom: 1.375rem
   color: $labelColor
   font-family: CirceRegular
@@ -78,7 +81,37 @@
 .modal-pay-details__addidation-container
   width: 15rem
 
-.modal-pay-details__further-button
+
+.modal-pay-details__lens-card-container
+  flex-basis: 16rem
+  flex-grow: 0
+  flex-shrink: 0
+  margin-bottom: 1.5rem
+  height: 3.25rem
+  font-family: CirceBold
+  font-size: 2rem
+  outline: none
+  & .lens-card__foto-container
+    height: 100%
+    width: 10%
+    background-position: left center
+  & .lens-card__description-container
+      width: 30%
+
+
+.modal-pay-details__trade-network-container,
+.modal-pay-details__axis-container,
+.modal-pay-details__addidation-container
+  .custom-options
+    padding-left: 1rem
+  & .custom-options-caption
+    top: 125%
+
+
+
+
+.modal-pay-details__further-button,
+.modal-pay-details__accept-button
   display: block
   float: left
   margin-top: 1rem

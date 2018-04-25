@@ -97,11 +97,13 @@
             }
 
             /* Insert the previous and next buttons after the submit button and hide it until we're ready */
-            
+
+
+
             var prev = $(settings.prevButton);//$(settings.prevButton).insertBefore(submitButton);
             var next = $(settings.nextButton);//$(settings.nextButton).insertBefore(submitButton);
             submitButton.hide();
-            
+
             /* If the root element is first disable the previous button */            
             if(root.is(':first-child')){
                 disablePrev(prev);

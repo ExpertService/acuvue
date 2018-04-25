@@ -38,6 +38,8 @@ $labelColor: #b7b7b7
   color: $mainColor
   font-size: 1.75rem
   text-align: left
+.modal-action-lens__order-caption
+  display: none
 
 .modal-action-lens__lens-list-container
   display: flex
@@ -57,9 +59,7 @@ $labelColor: #b7b7b7
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.12)
   font-family: CirceBold
   font-size: 2rem
-  background-color: lightgrey
   outline: none
-  //.modal-action-lens__lens-item--animate
   &.modal-action-lens__lens-item--animate
     transform-style: preserve-3d
     animation: lensCard 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
@@ -67,19 +67,17 @@ $labelColor: #b7b7b7
 
 
 
-.modal-action-lens__save-button,
+.modal-action-lens__close-button,
 .modal-action-lens__order-button
   display: block
   float: left
   margin-top: 1rem
-  //width: 7.813rem
-  //height: 3.625rem
   line-height: 3.625rem
+.modal-action-lens__order-button
+  width: 17rem
+  display: none
 
-//.modal-action-lens__lens-list-container-opacity
-//  opacity: 0.3
-//
-//
+
 @keyframes lensCard
   100%
     transform: scale(1.1) translateY(5px)
