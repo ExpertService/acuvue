@@ -1,0 +1,78 @@
+$labelColor: #b7b7b7
+
+.modal-background-feedback
+  .modal-feedback
+    box-sizing: border-box
+    padding-top: 3.75rem
+    padding-left: 7.875rem
+    height: 100%
+    width: 65%
+    background: radial-gradient(100% 120% at 100% 50%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 99.9%,rgba(0,163,224,0) 100%)
+  @media screen and (max-width:  $tabletWidth)
+    .modal-feedback
+      padding-top: 3.75rem
+      padding-left: 3.75rem
+      width: 100%
+      background: white
+
+.modal-close-button
+  position: absolute
+  top: 1.5rem
+  right: 1.5rem
+  height: 1.563rem
+  width: 1.563rem
+  background-image: url(../img/common/ic_close.svg)
+  -webkit-background-size:
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  cursor: pointer
+  //stroke: black
+  //fill: white
+
+.modal-feedback__caption
+  margin-bottom: 3rem
+  color: $mainColor
+  font-size: 1.75rem
+  text-align: left
+
+.feedback__topic-container
+  margin-bottom: 0.2rem
+  max-width: 30.5rem
+  label
+    font-family: CirceRegular
+    font-size: 0.875rem
+    letter-spacing: -0.1px
+    line-height: 1.5rem
+    color: rgba(0,0,0,0.3)
+  .custom-options
+    padding-left: 1rem
+  & .custom-options-caption
+      top: 115%
+
+.feedback__input-email-container,
+.feedback__input-message-container
+  margin-bottom: 0.2rem
+  max-width: 30.5rem
+  .custom-input__inputs-container
+    border: solid 1px #dcdcdc
+    .custom-input__field
+      padding-left: 0.75rem
+
+.feedback__input-message-container.custom-input__container
+  height: 10.875rem
+  margin-bottom: 1rem
+  .custom-input__validation-output-container
+    height: 100%
+  .custom-input__inputs-container
+    height: 85%
+
+
+
+.modal-feedback__send-button
+  display: block
+  float: left
+  margin-top: 1rem
+  //width: 7.813rem
+  //height: 3.625rem
+  line-height: 3.625rem

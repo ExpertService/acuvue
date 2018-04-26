@@ -16,6 +16,7 @@
 
 .button-settings-type
   color: #393f4e
+  border: solid 1px #565c64
   background-color: #fdfcfa
 
 .button-change-parameters-type--disabled,
@@ -26,10 +27,18 @@
   background-color: #def6ff
   box-shadow: none
 
+.button-change-parameters-type:hover
+  background-color: #def6ff
+  box-shadow: none
+  cursor: pointer
+
 .button-settings-type:active
   background-color: #f6f6f6
   box-shadow: none
-
+.button-settings-type:hover
+  background-color: #f6f6f6
+  box-shadow: none
+  cursor: pointer
 
 .button-save-type,
 .button-save-type--disabled
@@ -45,7 +54,12 @@
   background-color: #003087
   box-shadow: 0 2px 4px 0 rgba(20, 20, 20, 0.12)
 .button-save-type:active
+  opacity: 0.9
   box-shadow: none
+.button-save-type:hover
+  opacity: 0.9
+  box-shadow: none
+  cursor: pointer
 .button-save-type--disabled
   opacity: 0.5
 
@@ -64,9 +78,14 @@
   text-transform: uppercase
   background-color: white
   box-shadow: 0 2px 4px 0 rgba(20, 20, 20, 0.12)
-.button-save-type:active
+.button-close-type:active
   background-color: #f6f6f6
   box-shadow: none
-.button-save-type--disabled
+  cursor: pointer
+.button-close-type:hover
+  background-color: #f6f6f6
+  box-shadow: none
+  cursor: pointer
+.button-close-type--disabled
   color: grey
   border: solid 1px #dcdcdc

@@ -11,15 +11,11 @@ block content
 				ul
 					li(class="first-tab active-tab") Войти
 						.custom-tabs-underliner
-						//label(for="enterTab") Войти
-							//span Войти
 					li(class="second-tab") Регистрация
 						.custom-tabs-underliner
-						//label(for="registrationTab") Регистрация
-							//span Регистрация
 			section
 				div(class="first-tab-content login-registration__login-tab")
-					form(id="login-form", method="get", action="./index.html", role="form").login__form
+					form(id="login-form", method="get", action="./main.html", role="form").login__form
 						.login__container
 							label(for="inputPhoneNumber").login__phone-label Номер телефона
 							.login__inputs-container
@@ -30,7 +26,6 @@ block content
 									+icon('ic-eye-close', 'show-password-icon')
 									+icon('ic-eye-open', 'hide-password-icon')
 								button(type="submit").login__enter-button.button-save-type Войти
-								//a(href="index.html" class="login__enter-button") Войти
 								a(href="./restore-password.html" class="login__fogot-password") Забыли пароль?
 				div(class="second-tab-content login-registration__registration-tab")
 					form(id="registration-form", method="get", action="./registration.html", role="form").registration__form

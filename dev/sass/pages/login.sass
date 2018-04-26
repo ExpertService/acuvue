@@ -37,6 +37,10 @@
   padding-left: 7rem
   width: 50%
   min-height: 35rem
+  background-image: url(../img/content/login-foto.png)
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
 @media screen and (max-width:  $tabletWidth)
   .login-foto-section
     display: none
@@ -60,7 +64,7 @@
   padding-left: 1rem
   width: 39%
   color: white
-  opacity: 0.7
+  opacity: 0.9
   font-family: CirceRegular
   font-size: 0.875rem
   letter-spacing: -0.1px
@@ -144,7 +148,7 @@
   bottom: -55%
   left: 43%
   color: white
-  font-family: CirceRegular
+  font-family: CirceBold
   font-size: 0.875rem
   letter-spacing: -0.1px
   user-select: none
@@ -156,6 +160,12 @@
   margin-top: 1.625rem
 .registration__input-phone-container
   margin-bottom: 0.2rem
+
+.registration__input-phone-container,
+.registration__input-email-container,
+.registration__input-password-container
+  label
+    color: white
 
 .registration__input-password-container
   margin-bottom: 2.5rem

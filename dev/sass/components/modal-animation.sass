@@ -1,5 +1,8 @@
 .modal-container-lenses-parameters,
-.modal-container-addpoints
+.modal-container-addpoints,
+.modal-container-order-card,
+.modal-container-points-friend,
+.modal-container-QR-code
   position: fixed
   display: flex
   height: calc(100vh - 6rem - 5rem)
@@ -12,28 +15,47 @@
     transform: scaleY(.01) scaleX(0)
     animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
     .modal-background-lenses-parameters,
-    .modal-background-addpoints
+    .modal-background-addpoints,
+    .modal-background-order-card,
+    .modal-background-points-friend,
+    .modal-background-QR-code
       .modal-lenses-parameters,
-      .modal-addpoints
+      .modal-addpoints,
+      .modal-order-card,
+      .modal-points-friend,
+      .modal-QR-code
         transform: scale(0)
         animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
     &.disappearing
       transform: scale(1)
       animation: unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
       .modal-background-lenses-parameters,
-      .modal-background-addpoints
+      .modal-background-addpoints,
+      .modal-background-order-card,
+      .modal-background-points-friend,
+      .modal-background-QR-code
         .modal-lenses-parameters,
-        .modal-addpoints
+        .modal-addpoints,
+        .modal-order-card,
+        .modal-points-friend,
+        .modal-QR-code
           animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
 @media screen and (max-width:  $iPadTabletWidth)
   .modal-container-lenses-parameters,
-  .modal-container-addpoints
+  .modal-container-addpoints,
+  .modal-container-order-card,
+  .modal-container-points-friend,
+  .modal-container-QR-code,
+  .modal-container-question-answer,
+  .modal-container-feedback
     top: 0
+    z-index: 5
     height: calc(100vh)
 
-
 .modal-container-settings,
-.modal-container-action-lens
+.modal-container-action-lens,
+.modal-container-question-answer,
+.modal-container-feedback
   position: fixed
   display: flex
   height: calc(100vh - 6rem - 5rem)
@@ -45,27 +67,40 @@
   &.appearing
     transform: scale(1)
     .modal-background-settings,
-    .modal-background-action-lens
+    .modal-background-action-lens,
+    .modal-background-question-answer,
+    .modal-background-feedback
       background: rgba(0,0,0,.0)
-      animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+      animation: fadeIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
       .modal-settings,
-      .modal-action-lens
+      .modal-action-lens,
+      .modal-question-answer,
+      .modal-feedback
         transform: translateX(-1500px)
-        animation: roadRunnerIn .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+        animation: roadRunnerIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
     &.disappearing
       animation: quickScaleDown 0s .8s linear forwards
       .modal-background-settings,
-      .modal-background-action-lens
+      .modal-background-action-lens,
+      .modal-background-question-answer,
+      .modal-background-feedback
         animation: fadeOut .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
         .modal-settings,
-        .modal-action-lens
+        .modal-action-lens,
+        .modal-question-answer,
+        .modal-feedback
           animation: roadRunnerOut .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
       
 
 .modal-background-lenses-parameters,
 .modal-background-addpoints,
 .modal-background-settings,
-.modal-background-action-lens
+.modal-background-action-lens,
+.modal-background-order-card,
+.modal-background-points-friend,
+.modal-background-QR-code,
+.modal-background-question-answer,
+.modal-background-feedback
   flex-basis: auto
   flex-grow: 1
   flex-shrink: 1
@@ -82,21 +117,44 @@
   .modal-lenses-parameters,
   .modal-addpoints,
   .modal-settings,
-  .modal-action-lens
+  .modal-action-lens,
+  .modal-order-card,
+  .modal-points-friend,
+  .modal-QR-code,
+  .modal-question-answer,
+  .modal-feedback
     position: relative
     display: inline-block
     padding: 1.5rem
     background: white
-    border-radius: 3px
+    border-radius: 8px
     font-weight: 300
     background-color: white
+  .modal-settings,
+  .modal-action-lens,
+  .modal-question-answer,
+  .modal-feedback
+    border-radius: 8px 0 0 8px
+
 @media screen and (max-width:  $mobileWidth)
   .modal-background-lenses-parameters,
-  .modal-background-addpoints
+  .modal-background-addpoints,
+  .modal-background-order-card,
+  .modal-background-points-friend,
+  .modal-background-QR-code
+    align-items: flex-start
+@media screen and (max-height:  800px)
+  .modal-background-lenses-parameters,
+  .modal-background-addpoints,
+  .modal-background-order-card,
+  .modal-background-points-friend,
+  .modal-background-QR-code
     align-items: flex-start
 
 .modal-background-settings,
-.modal-background-action-lens
+.modal-background-action-lens,
+.modal-background-question-answer,
+.modal-background-feedback
   justify-content: flex-end
 
 @keyframes unfoldIn

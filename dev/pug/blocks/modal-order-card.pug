@@ -1,0 +1,60 @@
+.modal-container-order-card
+    .modal-background-order-card
+        section.modal-order-card
+            .modal-close-button
+            form(id="cardOrderForm", method="post", action="#", role="form").order-card__card-order-form
+                section.card-order-form__first-step
+                    h1.order-card__caption Заказать карту
+
+                    .order-card__container
+                        .order-card__input-city-container.custom-input__container
+                            label(for="inputCityCardOrder").order-card__city-label.custom-input__label Город
+                                .custom-input__validation-output-container
+                                    span.custom-input__validation-output-field Неверный город
+                                .custom-input__inputs-container
+                                    input(type="text" id="inputCityCardOrder" placeholder="Город").order-card__field-city.custom-input__field
+
+                        .order-card__input-street-container.custom-input__container
+                            label(for="inputStreetCardOrder").order-card__street-label.custom-input__label Улица
+                                .custom-input__validation-output-container
+                                    span.custom-input__validation-output-field Неверное значение
+                                .custom-input__inputs-container
+                                    input(type="text" id="inputStreetCardOrder" placeholder="Улица").order-card__field-street.custom-input__field
+
+                        .order-card__input-house-container.custom-input__container
+                            label(for="inputHouseCardOrder").order-card__house-label.custom-input__label Дом
+                                .custom-input__validation-output-container
+                                    span.custom-input__validation-output-field Неверное значение
+                                .custom-input__inputs-container
+                                    input(type="text" id="inputHouseCardOrder" placeholder="Номер дома").order-card__field-house.custom-input__field
+                                    input(type="text" id="inputApartmentCardOrder" placeholder="Квартира/офис").order-card__field-apartment.custom-input__field
+
+                        .order-card__input-index-container.custom-input__container
+                                //label(for="inputStreetCardOrder").order-card__street-label.custom-input__label Улица
+                                .custom-input__validation-output-container
+                                    span.custom-input__validation-output-field Неверное значение
+                                .custom-input__inputs-container
+                                    input(type="text" id="inputIndexCardOrder" placeholder="Индекс").order-card__field-index.custom-input__field
+
+                section.lens-order-form__second-step
+                    h1.order-card__caption Подтверждение заказа
+                    .order-card__confirm-container
+                        span.order-card__confirm-caption Город
+                        span.order-card__confirm-city Хабаровск
+                    .order-card__confirm-container
+                        span.order-card__confirm-caption Улица
+                        span.order-card__confirm-street Первомайская
+                    .order-card__confirm-container
+                        span.order-card__confirm-caption дом
+                        span.order-card__confirm-house 34с1
+                    .order-card__confirm-container
+                        span.order-card__confirm-caption Квартира/Офис
+                        span.order-card__confirm-apartment Не указано
+                    .order-card__confirm-container
+                        span.order-card__confirm-caption Индекс
+                        span.order-card__confirm-index 124123
+
+                button(type="button" id="cardOrderFormNextButton").modal-pay-details__further-button.button-save-type Далее
+                button(type="submit").modal-pay-details__accept-button.button-save-type Подтвердить
+
+

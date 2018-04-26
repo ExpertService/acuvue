@@ -1,0 +1,29 @@
+.modal-container-feedback
+    .modal-background-feedback
+        section.modal-feedback
+            .modal-close-button
+            h1.modal-feedback__caption Обратная связь
+            form(id="feedback-form", method="post", action="#", role="form").modal-settings__form
+
+                .feedback__topic-container.custom-input__container
+                    label.feedback__select-label.custom-input__label Выберите тему
+                        .custom-input__validation-output-container
+                            span.custom-input__validation-output-field Неверное значение
+                    .feedback__topic-select-container
+                        select(name="topic" id="topic" class="custom-select feedback__topic" placeholder="Тема")
+                            option(value="Отзыв") Отзыв
+                            option(value="Консультация") Консультация
+
+                .feedback__input-email-container.custom-input__container
+                    .custom-input__validation-output-container
+                        span.custom-input__validation-output-field Неверное значение
+                    .custom-input__inputs-container
+                        input(type="text" id="inputEmailFeedback" placeholder="Электронный адрес для ответа").feedback__field-email.custom-input__field
+
+                .feedback__input-message-container.custom-input__container
+                    .custom-input__validation-output-container
+                        span.custom-input__validation-output-field Неверное значение
+                    .custom-input__inputs-container
+                        textarea(type="text" id="inputMessageFeedback" placeholder="Текст сообщения в две, три строки").feedback__field-message.custom-input__field
+
+                button(type="submit").modal-feedback__send-button.button-save-type Отправить

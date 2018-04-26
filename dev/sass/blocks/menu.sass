@@ -10,18 +10,27 @@
     order: 1
 
 .custom-navbar__menu ul
-  display: flex
-  justify-content: flex-start
 
 .custom-navbar__menu li
+  display: inline-block
+  float: left
   margin-left: 1rem
   margin-right: 1rem
+  line-height: 5rem
+  padding-bottom: 4px
+  & a
+    display: inline-block
+    height: 100%
+    border-bottom: 4px solid white
+    &:hover
+      border-bottom: 4px solid $mainColor
 
 .custom-navbar__menu li:first-child
   margin-left: 2rem
 
-.custom-navbar__toggle-nav,
-.menu-exit-item
+.custom-navbar__toggle-nav
+  display: none
+.custom-navbar__menu li.menu-exit-item
   display: none
 
 @media screen and (max-width:  $toggleMenuWidth)
@@ -31,11 +40,11 @@
     ul.custom-navbar__active
         display: none
   .custom-navbar__menu ul
-    flex-direction: column
+    //flex-direction: column
     position: absolute
     left: -20%
     top: 101%
-    width: 60vw
+    width: 20rem
     box-shadow: 0 1px 1px rgba(0,0,0,0.15)
     border-radius: 3px
     background: white
@@ -45,8 +54,12 @@
     margin-right: 0.625rem
     margin-bottom: 0.5rem
     margin-left: 0.625rem
+    width: 93%
+    line-height: 3rem
     &:first-child
       margin-left: 10px
+    & a
+      width: 100%
 
   .custom-navbar__toggle-nav
     display: inline-flex
@@ -68,12 +81,25 @@
     width: 100vw
     align-items: center
 
-  .menu-exit-item
+  .custom-navbar__menu li
+    width: 95%
+    line-height: 2rem
+    text-align: center
+    & a
+      text-align: center
+
+  .custom-navbar__menu li.menu-exit-item
     display: block
-    &
-      a
-        display: inline-flex
-        align-items: center
+    //width: 50%
+    //margin-left: auto
+    //margin-right: auto
+
+  //.menu-exit-item
+  //    a
+  //      display: flex !important
+  //      align-content: center !important
+  //      justify-items: space-around !important
+  //      align-items: center !important
 
   .custom-navbar__toggle-nav
     margin-left: 1rem

@@ -33,6 +33,12 @@ $(document).ready(function () {
             jQuery('.custom-navbar__menu ul').toggleClass('custom-navbar__active');
             e.preventDefault();
         });
+
+        jQuery('.custom-navbar__menu ul').click(function (e) {
+            jQuery(this).toggleClass('custom-navbar__active');
+            jQuery('.custom-navbar__menu').toggleClass('custom-navbar__active');
+            //e.preventDefault();
+        });
     })();
 
 
@@ -98,17 +104,44 @@ $(document).ready(function () {
             $('.setting-password-form__old-password-container').show();
             $('body').addClass('modal-active');
         });
+        $('.order-QR-card__button').click(function(){
+            $('.modal-container-order-card').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
+        });
+        $('.plus-points__button').click(function(){
+            $('.modal-container-points-friend').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
+        });
+        $('.QR-code__button').click(function(){
+            $('.modal-container-QR-code').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
+        });
 
         $('.action-lens-link').click(function(){
             $('.modal-container-action-lens').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
+        $('.question-answer-link').click(function(){
+            $('.modal-container-question-answer').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
+        });
+        $('.feedback-link').click(function(){
+            $('.modal-container-feedback').removeClass('disappearing').addClass('appearing');
+            $('body').addClass('modal-active');
+        });
+
 
         $('.modal-close-button').click(function(){
             $('.modal-container-lenses-parameters').addClass('disappearing');
             $('.modal-container-addpoints').addClass('disappearing');
             $('.modal-container-settings').addClass('disappearing');
+            $('.modal-container-order-card').addClass('disappearing');
+            $('.modal-container-points-friend').addClass('disappearing');
+            $('.modal-container-QR-code').addClass('disappearing');
+
             $('.modal-container-action-lens').addClass('disappearing');
+            $('.modal-container-question-answer').addClass('disappearing');
+            $('.modal-container-feedback').addClass('disappearing');
             $('body').removeClass('modal-active');
         });
 
@@ -116,6 +149,15 @@ $(document).ready(function () {
             $('.modal-container-action-lens').addClass('disappearing');
             $('body').removeClass('modal-active');
         });
+        $('.modal-points-friend__copy-button').click(function(){
+            $('.modal-container-points-friend').addClass('disappearing');
+            $('body').removeClass('modal-active');
+        });
+        $('.modal-QR-code__copy-button').click(function(){
+            $('.modal-container-QR-code').addClass('disappearing');
+            $('body').removeClass('modal-active');
+        });
+
     })();
 
 
@@ -129,7 +171,12 @@ $(document).ready(function () {
             $('.modal-action-lens__close-button').hide();
             $('.modal-action-lens__lens-item').not(this).fadeTo(0, 0.3);
             $(this).fadeTo(0, 1);
-            $(this).toggleClass('modal-action-lens__lens-item--animate');
+            if($(this).hasClass('modal-action-lens__lens-item--animate')){
+
+            }
+            else {
+                $(this).toggleClass('modal-action-lens__lens-item--animate');
+            }
             $('.modal-action-lens__lens-item').not(this).removeClass('modal-action-lens__lens-item--animate');
             e.stopPropagation();
         });
@@ -198,6 +245,13 @@ $(document).ready(function () {
 
     $('#lensOrderForm').quickWizard({
             nextButton : '#lensOrderFormNextButton',
+            element: 'section',
+            breadCrumb: false
+        }
+    );
+
+    $('#cardOrderForm').quickWizard({
+            nextButton : '#cardOrderFormNextButton',
             element: 'section',
             breadCrumb: false
         }

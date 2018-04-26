@@ -125,10 +125,10 @@
                         $(nextSet).toggleClass(settings.activeClass);
                         
                         /* Get the current element's position and store it */
-                        active.data('posiiton', active.css('position'));
+                        active.data('position', active.css('position'));
 
                         /* Set our callback function */
-                        insertedNextCallback = function () { active.css('position', active.data('posiiton')); };
+                        insertedNextCallback = function () { active.css('position', active.data('position')); };
 
                         /* Call show and hide with the user provided arguments */
                         active.css('position', 'absolute').hide.apply(active, settings.nextArgs);
@@ -163,8 +163,8 @@
                 if (prevSet.length) {
                     $(active).toggleClass(settings.activeClass);
                     $(prevSet).toggleClass(settings.activeClass);                    
-                    prevSet.data('posiiton', prevSet.css('position'));
-                    insertedNextCallback = function () { prevSet.css('position', prevSet.data('posiiton')); };
+                    prevSet.data('position', prevSet.css('position'));
+                    insertedNextCallback = function () { prevSet.css('position', prevSet.data('position')); };
                     active.hide.apply(active, settings.prevArgs);
                     prevSet.css('position', 'absolute').show.apply(prevSet, settings.nextArgs);
                     if (settings.breadCrumb) {
@@ -191,10 +191,10 @@
 					
 					
 					/* Get the current element's position and store it */
-					active.data('posiiton', active.css('position'));	
+					active.data('position', active.css('position'));
 					
 					/* Set our callback function */
-					insertedNextCallback = function () { active.css('position', active.data('posiiton')); };	
+					insertedNextCallback = function () { active.css('position', active.data('position')); };
 
 					/* Call show and hide with the user provided arguments */
 					active.css('position', 'absolute').hide.apply(active, settings.nextArgs);
