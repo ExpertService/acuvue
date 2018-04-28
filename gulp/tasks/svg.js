@@ -10,6 +10,7 @@ module.exports = function() {
             ))
             .pipe($.gp.cheerio({
                 run: function($) {
+                    $('[title]').removeAttr('title');
                     // $('[fill]').removeAttr('fill');
                     // $('[stroke]').removeAttr('stroke');
                     // $('[style]').removeAttr('style');

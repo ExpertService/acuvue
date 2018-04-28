@@ -9,99 +9,100 @@
   .custom-navbar__menu
     order: 1
 
-.custom-navbar__menu ul
+.custom-navbar__menu
+  ul
+    height: $headerHeight
+    li
+      display: inline-block
+      float: left
+      margin-left: 1rem
+      margin-right: 1rem
+      height: $headerHeight
+      &.menu-exit-item
+        display: none
+      a
+        display: inline-block
+        height: $headerHeight
+        line-height: $headerHeight
+        vertical-align: middle
+        transform: perspective(1px) translateZ(0)
+        position: relative
+        overflow: hidden
+        &:before
+          content: ""
+          position: absolute
+          z-index: -1
+          left: 0
+          right: 100%
+          bottom: 0
+          background: $mainColor
+          height: 4px
+          transition-property: right
+          transition-duration: 0.1s
+          transition-timing-function: ease-out
+        &:hover:before, &:focus:before, &:active:before
+          right: 0
+        &.custom-navbar__active-item:before
+          right: 0
 
-.custom-navbar__menu li
-  display: inline-block
-  float: left
-  margin-left: 1rem
-  margin-right: 1rem
-  line-height: 5rem
-  padding-bottom: 4px
-  & a
-    display: inline-block
-    height: 100%
-    border-bottom: 4px solid white
-    &:hover
-      border-bottom: 4px solid $mainColor
+    &:first-child
+      margin-left: 2rem
+  .custom-navbar__toggle-nav
+    display: none
 
-.custom-navbar__menu li:first-child
-  margin-left: 2rem
-
-.custom-navbar__toggle-nav
-  display: none
-.custom-navbar__menu li.menu-exit-item
-  display: none
 
 @media screen and (max-width:  $toggleMenuWidth)
   .custom-navbar__menu
     position: relative
-  .custom-navbar__menu
     ul.custom-navbar__active
-        display: none
-  .custom-navbar__menu ul
-    //flex-direction: column
-    position: absolute
-    left: -20%
-    top: 101%
-    width: 20rem
-    box-shadow: 0 1px 1px rgba(0,0,0,0.15)
-    border-radius: 3px
-    background: white
+      display: none
+    ul
+      height: auto
+      position: absolute
+      left: -48.5%
+      top: 102%
+      width: 15rem
+      box-shadow: 3px 3px 1px rgba(0,0,0,0.15)
+      border-radius: 0 0 3px 3px
+      background: white
+      li
+        width: 93%
+        height: 3rem
+        a
+          height: 3rem
+          line-height: 3rem
 
-  .custom-navbar__menu li
-    margin-top: 0.5rem
-    margin-right: 0.625rem
-    margin-bottom: 0.5rem
-    margin-left: 0.625rem
-    width: 93%
-    line-height: 3rem
-    &:first-child
-      margin-left: 10px
-    & a
-      width: 100%
-
-  .custom-navbar__toggle-nav
-    display: inline-flex
-    &
-      span
+    .custom-navbar__toggle-nav
+      display: inline-flex
+      margin-left: 1rem
+      & span
         margin-left: 1rem
         line-height: 1.5rem
+      .toggle-icon
+        display: inline-block
+        width: 1.5rem
+        height: 1.5rem
+        stroke: none
+        fill: $mainColor
 
-  .toggle-icon
-    display: inline-block
-    width: 1.5rem
-    height: 1.5rem
-    stroke: none
-    fill: $mainColor
 
 @media screen and (max-width:  $toggleMenuMobile)
-  .custom-navbar__menu ul
-    left: 0
-    width: 100vw
-    align-items: center
+  .custom-navbar__menu
+    ul
+      left: 0
+      width: 100vw
+      align-items: center
+      li
+        text-align: center
+      &:first-child
+        margin-left: 0rem
+      li.menu-exit-item
+        display: block
+        a
+          display: inline-flex
+          align-items: center
 
-  .custom-navbar__menu li
-    width: 95%
-    line-height: 2rem
-    text-align: center
-    & a
-      text-align: center
-
-  .custom-navbar__menu li.menu-exit-item
-    display: block
-    //width: 50%
-    //margin-left: auto
-    //margin-right: auto
-
-  //.menu-exit-item
-  //    a
-  //      display: flex !important
-  //      align-content: center !important
-  //      justify-items: space-around !important
-  //      align-items: center !important
-
-  .custom-navbar__toggle-nav
-    margin-left: 1rem
-    span
-      display: none
+    .custom-navbar__toggle-nav
+      margin-left: 1rem
+      span
+        display: none

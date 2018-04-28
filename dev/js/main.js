@@ -42,6 +42,28 @@ $(document).ready(function () {
     })();
 
 
+    //аккордеон
+    (function($) {
+        $('.custom-accordion > li:eq(0) a').addClass('active').next().slideDown();
+
+        $('.custom-accordion a').click(function(j) {
+            var dropDown = $(this).closest('li').find('p');
+
+            $(this).closest('.custom-accordion').find('p').not(dropDown).slideUp();
+
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $(this).closest('.custom-accordion').find('a.active').removeClass('active');
+                $(this).addClass('active');
+            }
+
+            dropDown.stop(false, true).slideToggle();
+
+            j.preventDefault();
+        });
+    })(jQuery);
+
     (function() {
         $('input[type=radio][name=lenses-for-correction-right-eye]').change(function() {
             if (this.value == 'astigmatismRightEye') {
