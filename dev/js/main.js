@@ -117,84 +117,85 @@ $(document).ready(function () {
 
     //анимация модальных окон
     (function () {
-        $('.lenses-parameters__change-parameters-button').click(function(){
-            $('.modal-container-lenses-parameters').addClass('disappearing');
-            $('.modal-container-addpoints').addClass('disappearing');
-            $('.modal-container-settings').addClass('disappearing');
-            $('.modal-container-order-card').addClass('disappearing');
-            $('.modal-container-points-friend').addClass('disappearing');
-            $('.modal-container-QR-code').addClass('disappearing');
+        var modalWindowClassesArray =[
+            '.modal-container-lens-order',
+            '.modal-container-addpoints',
+            '.modal-container-settings',
+            '.modal-container-order-card',
+            '.modal-container-points-friend',
+            '.modal-container-QR-code',
+            '.modal-container-action-lens',
+            '.modal-container-question-answer',
+            '.modal-container-feedback',
+            '.modal-container-lens-parameters'
+        ];
+        function modalsDisappearing() {
+            modalWindowClassesArray.forEach(function(modalWindowClassName){
+                if($(modalWindowClassName).hasClass('appearing')){
+                    $(modalWindowClassName).addClass('disappearing');
+                }
+            });
+        };
+        function closeModal() {
+            modalsDisappearing();
+            $('body').removeClass('modal-active');
+        }
 
-            $('.modal-container-action-lens').addClass('disappearing');
-            $('.modal-container-question-answer').addClass('disappearing');
-            $('.modal-container-feedback').addClass('disappearing');
-            $('.modal-container-lenses-parameters').removeClass('disappearing').addClass('appearing');
+
+        $('.lenses-parameters__change-parameters-button').click(function(){
+            modalsDisappearing();
+            $('.modal-container-lens-parameters').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
         $('.purchase-history__addpoints-button').click(function(){
+            modalsDisappearing();
             $('.modal-container-addpoints').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
         $('.settings__button').click(function(){
+            modalsDisappearing();
             $('.modal-container-settings').removeClass('disappearing').addClass('appearing');
             $('.setting-password-form__new-password-container').hide();
             $('.setting-password-form__old-password-container').show();
             $('body').addClass('modal-active');
         });
         $('.order-QR-card__button').click(function(){
+            modalsDisappearing();
             $('.modal-container-order-card').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
         $('.plus-points__button').click(function(){
+            modalsDisappearing();
             $('.modal-container-points-friend').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
         $('.QR-code__button').click(function(){
+            modalsDisappearing();
             $('.modal-container-QR-code').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
 
         $('.action-lens-link').click(function(){
+            modalsDisappearing();
             $('.modal-container-action-lens').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
         $('.question-answer-link').click(function(){
+            modalsDisappearing();
             $('.modal-container-question-answer').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
         $('.feedback-link').click(function(){
+            modalsDisappearing();
             $('.modal-container-feedback').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
 
-
-        $('.modal-close-button').click(function(){
-            $('.modal-container-lenses-parameters').addClass('disappearing');
-            $('.modal-container-addpoints').addClass('disappearing');
-            $('.modal-container-settings').addClass('disappearing');
-            $('.modal-container-order-card').addClass('disappearing');
-            $('.modal-container-points-friend').addClass('disappearing');
-            $('.modal-container-QR-code').addClass('disappearing');
-
-            $('.modal-container-action-lens').addClass('disappearing');
-            $('.modal-container-question-answer').addClass('disappearing');
-            $('.modal-container-feedback').addClass('disappearing');
-            $('body').removeClass('modal-active');
-        });
-
-        $('.modal-action-lens__close-button').click(function(){
-            $('.modal-container-action-lens').addClass('disappearing');
-            $('body').removeClass('modal-active');
-        });
-        $('.modal-points-friend__copy-button').click(function(){
-            $('.modal-container-points-friend').addClass('disappearing');
-            $('body').removeClass('modal-active');
-        });
-        $('.modal-QR-code__copy-button').click(function(){
-            $('.modal-container-QR-code').addClass('disappearing');
-            $('body').removeClass('modal-active');
-        });
-
+        $('.modal-close-button').click(closeModal);
+        $('.modal-close-button--right').click(closeModal);
+        $('.modal-action-lens__close-button').click(closeModal);
+        $('.modal-points-friend__copy-button').click(closeModal);
+        $('.modal-QR-code__copy-button').click(closeModal);
     })();
 
 
@@ -230,7 +231,7 @@ $(document).ready(function () {
         $('.modal-action-lens__order-button').click(function(){
             $('.modal-container-action-lens').addClass('disappearing');
             $('body').removeClass('modal-active');
-            $('.modal-container-lenses-parameters').removeClass('disappearing').addClass('appearing');
+            $('.modal-container-lens-order').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
             $('.modal-action-lens__order-caption').hide();
             $('.modal-action-lens__caption').show();
