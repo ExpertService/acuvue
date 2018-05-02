@@ -29,6 +29,11 @@ $(document).ready(function () {
 
     (function() {
         jQuery('.custom-navbar__toggle-nav').click(function (e) {
+
+            // $('html').one('click',function() {
+            //     $(".custom-select").removeClass("opened");
+            // });
+
             jQuery(this).toggleClass('custom-navbar__active');
             jQuery('.custom-navbar__menu ul').toggleClass('custom-navbar__active');
             e.preventDefault();
@@ -67,12 +72,12 @@ $(document).ready(function () {
     (function() {
         $('input[type=radio][name=lenses-for-correction-right-eye]').change(function() {
             if (this.value == 'astigmatismRightEye') {
-                $('.additional-registration__lenses-for-correction-astigmatism-right-eye-parameters').css('display','block');
-                $('.additional-registration__lenses-for-correction-presbyopia-right-eye-parameters').css('display','none');
+                $('.lens-parameters__lenses-for-correction-astigmatism-right-eye-parameters').css('display','block');
+                $('.lens-parameters__lenses-for-correction-presbyopia-right-eye-parameters').css('display','none');
             }
             else if (this.value == 'presbyopiaRightEye') {
-                $('.additional-registration__lenses-for-correction-astigmatism-right-eye-parameters').css('display','none');
-                $('.additional-registration__lenses-for-correction-presbyopia-right-eye-parameters').css('display','block');
+                $('.lens-parameters__lenses-for-correction-astigmatism-right-eye-parameters').css('display','none');
+                $('.lens-parameters__lenses-for-correction-presbyopia-right-eye-parameters').css('display','block');
             }
         });
     })();
@@ -80,12 +85,12 @@ $(document).ready(function () {
     (function() {
         $('input[type=radio][name=lenses-for-correction-left-eye]').change(function() {
             if (this.value == 'astigmatismLeftEye') {
-                $('.additional-registration__lenses-for-correction-astigmatism-left-eye-parameters').css('display','block');
-                $('.additional-registration__lenses-for-correction-presbyopia-left-eye-parameters').css('display','none');
+                $('.lens-parameters__lenses-for-correction-astigmatism-left-eye-parameters').css('display','block');
+                $('.lens-parameters__lenses-for-correction-presbyopia-left-eye-parameters').css('display','none');
             }
             else if (this.value == 'presbyopiaLeftEye') {
-                $('.additional-registration__lenses-for-correction-astigmatism-left-eye-parameters').css('display','none');
-                $('.additional-registration__lenses-for-correction-presbyopia-left-eye-parameters').css('display','block');
+                $('.lens-parameters__lenses-for-correction-astigmatism-left-eye-parameters').css('display','none');
+                $('.lens-parameters__lenses-for-correction-presbyopia-left-eye-parameters').css('display','block');
             }
         });
     })();
@@ -113,6 +118,16 @@ $(document).ready(function () {
     //анимация модальных окон
     (function () {
         $('.lenses-parameters__change-parameters-button').click(function(){
+            $('.modal-container-lenses-parameters').addClass('disappearing');
+            $('.modal-container-addpoints').addClass('disappearing');
+            $('.modal-container-settings').addClass('disappearing');
+            $('.modal-container-order-card').addClass('disappearing');
+            $('.modal-container-points-friend').addClass('disappearing');
+            $('.modal-container-QR-code').addClass('disappearing');
+
+            $('.modal-container-action-lens').addClass('disappearing');
+            $('.modal-container-question-answer').addClass('disappearing');
+            $('.modal-container-feedback').addClass('disappearing');
             $('.modal-container-lenses-parameters').removeClass('disappearing').addClass('appearing');
             $('body').addClass('modal-active');
         });
@@ -232,10 +247,10 @@ $(document).ready(function () {
     customInputNumberSpin($('.modal-pay-details__basic-curvature-input'));
     customInputNumberSpin($('.modal-pay-details__axis-input'));
 
-    customInputNumberSpin($('.additional-registration__left-eye-optical-strength-input'));
-    customInputNumberSpin($('.additional-registration__right-eye-optical-strength-input'));
-    customInputNumberSpin($('.additional-registration__optical-strength-astigmatism-left-eye-input'));
-    customInputNumberSpin($('.additional-registration__optical-strength-astigmatism-right-eye-input'));
+    customInputNumberSpin($('.lens-parameters__left-eye-optical-strength-input'));
+    customInputNumberSpin($('.lens-parameters__right-eye-optical-strength-input'));
+    customInputNumberSpin($('.lens-parameters__optical-strength-astigmatism-left-eye-input'));
+    customInputNumberSpin($('.lens-parameters__optical-strength-astigmatism-right-eye-input'));
 
     customPasswordField($('.modal-settings__input-password-container'));
     customPasswordField($('.registration__input-password-container'));
@@ -248,8 +263,8 @@ $(document).ready(function () {
     customCheckBox($('.additional-registration__accept-conditions'));
     customCheckBox($('.additional-registration__agreement-personal-data'));
     customCheckBox($('.additional-registration__agreement-sms'));
-    customCheckBox($('.additional-registration__both-eye-identical'));
-    customCheckBox($('.additional-registration__astigmatism-correction-checkbox'));
+    customCheckBox($('.lens-parameters__both-eye-identical'));
+    //customCheckBox($('.additional-registration__astigmatism-correction-checkbox'));
 
 
 
@@ -324,4 +339,10 @@ $(document).ready(function () {
         });
     })();
 
+    $(".custom-options").mCustomScrollbar({
+        theme: "dark-3"
+    });
+
+    // $(".content").scrollbar({
+    // });
 });

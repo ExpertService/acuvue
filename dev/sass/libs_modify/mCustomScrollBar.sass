@@ -1,0 +1,149 @@
+
+//настройка скролбара для прокуртки общего контена на главной странице и на страницах регистрации
+.content.mCustomScrollbar > .mCustomScrollBox /* contains plugin's markup */
+  height: 100%
+  width: 100%
+  //max-width: 100%
+  & > .mCSB_container /* contains the original content */
+    display: flex
+    overflow: hidden
+    min-height: 100%
+    height: 100%
+@media screen and (max-height: 750px)
+  .content.mCustomScrollbar > .mCustomScrollBox > .mCSB_container /* contains the original content */
+      height: auto
+@media screen and (max-width:  $tabletWidth)
+  .content.mCustomScrollbar > .mCustomScrollBox  > .mCSB_container /* contains the original content */
+    flex-wrap: wrap
+    min-height: 100%
+    height: auto
+
+//настройка прокрутки для контейнера с карточками акционных линз
+.modal-action-lens__lens-list-container.mCustomScrollbar > .mCustomScrollBox /* contains plugin's markup */
+  height: 100%
+  width: auto
+  & > .mCSB_container /* contains the original content */
+    display: flex
+    flex-wrap: wrap
+    justify-items: flex-start
+    align-items: flex-start
+    padding-left: 1rem
+
+//    height: auto
+//    min-height: 100%
+//@media screen and (max-height: 835px)
+//  .modal-action-lens__lens-list-container.mCustomScrollbar > .mCustomScrollBox > .mCSB_container /* contains the original content */
+//    height: auto
+//    //min-height: 100%
+//    //max-height: 77%
+
+//настройка прокрутки для контейнера модального окна акционных линз
+.modal-container-action-lens.mCustomScrollbar > .mCustomScrollBox
+  width: 100%
+  height: 100%
+  & > .mCSB_container /* contains the original content */
+    display: flex
+    width: 100%
+    height: 100%
+    //min-height: 100%
+@media screen and (max-height: 900px)
+  .modal-container-action-lens.mCustomScrollbar > .mCustomScrollBox > .mCSB_container
+    height: auto
+    //max-height: 100%
+
+//настройка прокрутки для модального окна Вопрос-ответ
+.modal-container-question-answer.mCustomScrollbar > .mCustomScrollBox
+  width: 100%
+  & > .mCSB_container /* contains the original content */
+    display: flex
+    width: 100%
+    height: 100%
+@media screen and (max-height: 815px)
+  .modal-container-question-answer.mCustomScrollbar > .mCustomScrollBox > .mCSB_container
+    height: auto
+
+//настройка прокрутки для модального окна обратная связь
+.modal-container-feedback.mCustomScrollbar > .mCustomScrollBox
+  width: 100%
+  & > .mCSB_container /* contains the original content */
+    display: flex
+    width: 100%
+    height: 100%
+@media screen and (max-height: 815px)
+  .modal-container-feedback.mCustomScrollbar > .mCustomScrollBox > .mCSB_container
+    height: auto
+
+
+//настройка прокрутки для модального окна Изменение пароля по кнопке настройки на главной странице
+.modal-container-settings.mCustomScrollbar > .mCustomScrollBox
+  width: 100%
+  & > .mCSB_container /* contains the original content */
+    display: flex
+    width: 100%
+    height: 100%
+@media screen and (max-height: 815px)
+  .modal-container-settings.mCustomScrollbar > .mCustomScrollBox > .mCSB_container
+    height: auto
+
+
+//настройка прокрутки для модального окна Заказать карту по кнопке заказать карту на главной странице
+.modal-container-order-card.mCustomScrollbar > .mCustomScrollBox
+  width: 100%
+  height: 100%
+  & > .mCSB_container /* contains the original content */
+    display: flex
+    width: 100%
+    height: auto //100%
+    min-height: 44rem //100%
+//@media screen and (max-height: 770px)
+//  .modal-container-order-card.mCustomScrollbar > .mCustomScrollBox > .mCSB_container
+//    height: auto
+//    min-height: 600px
+
+
+//настройка прокрутки для модального окна Как заработать баллы по кнопке Как заработать баллы на главной странице
+.modal-container-addpoints.mCustomScrollbar > .mCustomScrollBox
+  width: 100%
+  & > .mCSB_container /* contains the original content */
+    display: flex
+    width: 100%
+    height: 100%
+@media screen and (max-height: 815px)
+  .modal-container-addpoints.mCustomScrollbar > .mCustomScrollBox > .mCSB_container
+    height: auto
+
+
+
+.mCSB_inside > .mCSB_container
+  margin-right: 12px
+
+/* theme "dark-3" */
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+  background-color: $mainColor
+  background-color: rgba($mainColor,0.75)
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
+  background-color: $mainColor
+  background-color: rgba($mainColor,0.85)
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar
+  background-color: $mainColor
+  background-color: rgba($mainColor,0.9)
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail
+  background-color: $mainColor
+  background-color: rgba($mainColor,0.1)
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp
+  background-position: -112px -72px
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown
+  background-position: -112px -92px
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft
+  background-position: -120px -112px
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight
+  background-position: -120px -128px

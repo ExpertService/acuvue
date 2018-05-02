@@ -1,10 +1,22 @@
-.modal-container-action-lens
+.modal-container-action-lens.mCustomScrollbar(data-mcs-theme="dark-3")
     .modal-background-action-lens
         section.modal-action-lens
             .modal-close-button
             h1.modal-action-lens__caption Участвующие линзы
             h1.modal-action-lens__order-caption Заказать бесплатную упаковку
-            ul.modal-action-lens__lens-list-container
+            ul.modal-action-lens__lens-list-container.mCustomScrollbar(data-mcs-theme="dark-3")
+                li.modal-action-lens__lens-item(tabindex="1000")
+                    include ../blocks/lens-card
+                li.modal-action-lens__lens-item(tabindex="1000")
+                    include ../blocks/lens-card
+                li.modal-action-lens__lens-item(tabindex="1000")
+                    include ../blocks/lens-card
+                li.modal-action-lens__lens-item(tabindex="1000")
+                    include ../blocks/lens-card
+                li.modal-action-lens__lens-item(tabindex="1000")
+                    include ../blocks/lens-card
+                li.modal-action-lens__lens-item(tabindex="1000")
+                    include ../blocks/lens-card
                 li.modal-action-lens__lens-item(tabindex="1000")
                     include ../blocks/lens-card
                 li.modal-action-lens__lens-item(tabindex="1000")

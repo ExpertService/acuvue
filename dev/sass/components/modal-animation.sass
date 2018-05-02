@@ -134,7 +134,7 @@
   .modal-action-lens,
   .modal-question-answer,
   .modal-feedback
-    min-height: 35rem
+    min-height: 40rem
     border-radius: 8px 0 0 8px
 
 @media screen and (max-width:  $mobileWidth)
@@ -148,16 +148,19 @@
   .modal-background-question-answer,
   .modal-background-feedback
     align-items: flex-start
+    border-radius: 0 0 0 0
 @media screen and (max-height:  800px)
   .modal-background-lenses-parameters,
   .modal-background-addpoints,
   .modal-background-order-card,
-  .modal-background-points-friend,
-  .modal-background-QR-code,
   .modal-background-settings,
   .modal-background-action-lens,
   .modal-background-question-answer,
   .modal-background-feedback
+    align-items: flex-start
+@media screen and (max-height:  600px)
+  .modal-background-points-friend,
+  .modal-background-QR-code
     align-items: flex-start
 
 .modal-background-settings,

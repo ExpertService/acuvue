@@ -2,6 +2,8 @@ module.exports = function() {
     $.gulp.task('libsJS:dev', function() {
         return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js',
                             'node_modules/jquery-validation/dist/jquery.validate.js',
+                            'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+                            'dev/js/libs/jquery-scrollbar/jquery.scrollbar.min.js',
                             'dev/js/libs/customInputNumberSpin.js',
                             'node_modules/slick-carousel/slick/slick.min.js',
                             'dev/js/libs/jquery.maskedinput.js',
@@ -21,6 +23,8 @@ module.exports = function() {
     $.gulp.task('libsJS:build', function() {
         return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js',
                             'node_modules/jquery-validation/dist/jquery.validate.js',
+                            'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+                            'dev/js/libs/jquery-scrollbar/jquery.scrollbar.min.js',
                             'dev/js/libs/customInputNumberSpin.js',
                             'node_modules/slick-carousel/slick/slick.min.js',
                             'dev/js/libs/jquery.maskedinput.js',
